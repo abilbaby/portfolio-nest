@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Abil K Baby</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">AK<span></span></div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skill.html">Skills</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+
+  <h1>Get in <strong>Touch</strong></h1>
+  <p class="hero-sub">
+    Have a project in mind, an opportunity to share, or just want to say hello?
+    I'd love to hear from you.
+  </p>
+</section>
+
+
+<section class="section">
+  <div class="contact-layout">
+
+    
+    <div class="contact-info">
+      <div class="section-label">Contact Info</div>
+
+      <div class="contact-info-cards">
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📧</div>
+          <div>
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-value">abilkbaby2112004@gmail.com</div>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📍</div>
+          <div>
+            <div class="contact-info-label">Location</div>
+            <div class="contact-info-value">Puliyamthuruth,Puthenvelikara P.O,Kerala, India</div>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🎓</div>
+          <div>
+            <div class="contact-info-label">Status</div>
+            <div class="contact-info-value available">Open to opportunities</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="contact-form-wrap">
+      <div class="section-label">Send a Message</div>
+      <div class="about-card contact-card">
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label>Your Email</label>
+              <input type="email" placeholder="Enter your email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" placeholder="What's this about?">
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="5" placeholder="Your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-icon">→</span>
+          </button>
+          <div class="form-success" id="formSuccess">
+            ✅ Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Abil K Baby</span>
+</footer>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const success = document.getElementById('formSuccess');
+    success.style.display = 'block';
+    setTimeout(() => { success.style.display = 'none'; this.reset(); }, 4000);
+  });
+</script>
+
+</body>
+</html>
