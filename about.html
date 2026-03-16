@@ -5,75 +5,480 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — Abil K Baby</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── ABOUT LAYOUT ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      font-size: 0.97rem;
+      line-height: 1.85;
+      margin-bottom: 1.1rem;
+    }
+
+    .about-text p strong { color: var(--text-mid); font-weight: 600; }
+
+    .detail-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .detail-card-header {
+      background: var(--navy);
+      color: white;
+      padding: 1rem 1.3rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0.85rem 1.3rem;
+      border-bottom: 1px solid var(--border);
+      gap: 1rem;
+    }
+
+    .detail-row:last-child { border-bottom: none; }
+
+    .detail-key {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted2);
+      flex-shrink: 0;
+    }
+
+    .detail-val {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-mid);
+      text-align: right;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--green);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .status-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: #22c55e;
+      border-radius: 50%;
+      animation: blink 2s infinite;
+    }
+
+    @keyframes blink {
+      0%,100% { opacity:1; } 50% { opacity:0.4; }
+    }
+
+    .do-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.1rem;
+    }
+
+    .do-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.6rem;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+
+    .do-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+
+    .do-icon {
+      width: 40px; height: 40px;
+      background: var(--blue-light);
+      border-radius: var(--radius-sm);
+      display: grid;
+      place-items: center;
+      font-size: 1.1rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .do-card h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.45rem;
+    }
+
+    .do-card p { font-size: 0.83rem; color: var(--muted); line-height: 1.65; }
+
+    .timeline { position: relative; padding-left: 1.8rem; }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px; bottom: 8px;
+      width: 2px;
+      background: var(--border);
+      border-radius: 2px;
+    }
+
+    .tl-item { position: relative; margin-bottom: 2.2rem; }
+
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -1.8rem;
+      top: 6px;
+      width: 10px; height: 10px;
+      background: var(--blue-acc);
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0 0 0 2px var(--border);
+    }
+
+    .tl-year {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue-acc);
+      margin-bottom: 0.25rem;
+    }
+
+    .tl-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.2rem;
+    }
+
+    .tl-sub { font-size: 0.82rem; color: var(--muted); }
+
+    .cta-strip {
+      background: var(--navy);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .cta-strip h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    .cta-strip p { color: rgba(255,255,255,0.6); font-size: 0.88rem; margin-top: 0.3rem; }
+
+    .btn-cta-white {
+      background: white;
+      color: var(--navy);
+      padding: 0.78rem 1.7rem;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.875rem;
+      white-space: nowrap;
+      transition: opacity var(--transition);
+    }
+
+    .btn-cta-white:hover { opacity: 0.9; }
+
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .do-grid { grid-template-columns: 1fr; }
+      .cta-strip { flex-direction: column; align-items: flex-start; }
+    }
+
+
+    .projects-section{
+max-width:1100px;
+margin:auto;
+padding:70px 20px;
+}
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.project-card{
+background:#fff;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+transition:0.2s;
+}
+
+.project-card:hover{
+transform:translateY(-5px);
+}
+
+.project-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.project-card h3{
+margin:15px;
+font-size:18px;
+}
+
+.project-card p{
+margin:0 15px 15px;
+font-size:14px;
+color:#666;
+}
+
+.project-card a{
+display:block;
+margin:0 15px 20px;
+font-size:14px;
+color:#3b5bdb;
+text-decoration:none;
+font-weight:500;
+}
+  </style>
 </head>
+
 <body>
 
 <nav>
-  <div class="nav-brand">AK<span></span></div>
+  <a href="index.html" class="nav-brand">AK</a>
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html" class="active">About</a></li>
-    <li><a href="skills.html">Skills</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li class="nav-hide"><a href="skills.html">Skills</a></li>
+    <li><a href="contact.html" class="nav-cta-link">Contact</a></li>
   </ul>
 </nav>
 
-<section class="hero">
+<div class="page-hero">
+  <div class="page-hero-label">Who I Am</div>
   <h1>About <strong>Me</strong></h1>
-  <p class="hero-sub">
-    A passionate Computer Science student on a journey to build meaningful digital experiences.
-  </p>
-</section>
+  <p>A passionate Computer Science student on a journey to build meaningful digital experiences.</p>
+</div>
 
-<section class="section">
-  <div class="section-label">Who I Am</div>
-  <div class="about-card">
-    <p>
-      I am currently pursuing an Integrated Master's in Computer Science under MG university
-      My interest lies in building web applications and learning modern
-      software development technologies.
-    </p>
-    <p>
-      I enjoy creating web applications using technologies such as
-      HTML, CSS, ASP.NET and SQL Server — turning ideas into clean,
-      functional digital experiences that are both intuitive and efficient.
-    </p>
+<hr class="page-divider">
+
+<section class="section" style="padding-top: 3rem;">
+  <div class="section-label">Background</div>
+
+  <div class="about-grid">
+
+    <div class="about-text">
+ <p>
+        I'm <strong>Abil K Baby</strong>, currently pursuing an <strong>Integrated Master's in
+        Computer Science</strong> under MG University, Kerala. My interest lies in building
+        web applications and learning modern software development technologies.
+      </p>
+      <p>
+        I enjoy creating web applications using technologies such as <strong>HTML, CSS,
+        ASP.NET and SQL Server</strong> — turning ideas into clean, functional digital
+        experiences that are both intuitive and efficient.
+      </p>
+      <p>
+        I believe in learning by doing. Every project teaches me something new,
+        whether it's a cleaner way to structure code or a better user experience pattern.
+        I'm always looking for opportunities to grow as a developer and contribute to real teams.
+      </p>
+    </div>
+
+    <div>
+      <div class="detail-card">
+        <div class="detail-card-header">Quick Info</div>
+
+        <div class="detail-row">
+          <span class="detail-key">Degree</span>
+          <span class="detail-val">Integrated MCA</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-key">University</span>
+          <span class="detail-val">MG University, Kerala</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-key">Location</span>
+          <span class="detail-val">Puthenvelikara, Kerala</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-key">Languages</span>
+          <span class="detail-val">English, Malayalam</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-key">Focus</span>
+          <span class="detail-val">Full-Stack Web Dev</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-key">Status</span>
+          <span class="detail-val"><span class="status-badge">Open to Opportunities</span></span>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- What I Do -->
-<section class="section">
+<section class="section" style="padding-top: 1rem;">
   <div class="section-label">What I Do</div>
-  <div class="about-cards-grid">
 
-    <div class="about-feature-card">
-      <div class="feature-title">Web Development</div>
-      <p>Building responsive, modern web interfaces using HTML, CSS and JavaScript with a focus on clean design and usability.</p>
+  <div class="do-grid">
+    <div class="do-card">
+      <h3>Web Development</h3>
+      <p>Building responsive modern web interfaces.</p>
     </div>
 
-    <div class="about-feature-card">
-      <div class="feature-title">Backend & APIs</div>
-      <p>Developing server-side applications and APIs using ASP.NET and C#, connected to SQL Server databases.</p>
+    <div class="do-card">
+      <h3>Backend & APIs</h3>
+      <p>Developing server-side applications using ASP.NET and C#.</p>
     </div>
 
-    <div class="about-feature-card">
-      <div class="feature-title">Database Design</div>
-      <p>Designing and managing relational databases with SQL Server, writing efficient queries and data schemas.</p>
+    <div class="do-card">
+      <h3>Database Design</h3>
+      <p>Designing relational databases with SQL Server and MySQL.</p>
     </div>
 
-    <div class="about-feature-card">
-      <div class="feature-title">Always Learning</div>
-      <p>Continuously exploring new frameworks, ai tools by using prompt and best practices to grow as a well-rounded software developer.</p>
+    <div class="do-card">
+      <h3>Always Learning</h3>
+      <p>Continuously exploring new frameworks and tools.</p>
     </div>
-
   </div>
 </section>
 
+
+<section class="section" style="padding-top: 1rem;">
+  <div class="section-label">Projects</div>
+
+<div class="projects-grid">
+
+<div class="project-card">
+
+<img src="./homeegram.png" alt="Homeegram">
+
+<h3>Homeegram</h3>
+
+<p>Assisted in development of a business website and helped with layout adjustments.</p>
+
+<a href="https://homeegram.com" target="_blank">View Website →</a>
+
+</div>
+
+
+<div class="project-card">
+
+<img src="./homeeframes.png" alt="Homeeframes">
+
+<h3>Homeeframes</h3>
+
+<p>Participated in frontend design and styling.</p>
+
+<a href="https://homeeframes.com" target="_blank">View Website →</a>
+
+</div>
+
+
+<div class="project-card">
+
+<img src="./aakash-travel.png" alt="Akash Travels">
+
+<h3>Akash Travels</h3>
+
+<p>Assisted in building travel agency website UI and page structure.</p>
+<a href="https://aakashtravel.in/" target="_blank">View Website →</a>
+</div>
+
+
+<div class="project-card">
+
+<h3>Child Vaccination Scheduling System</h3>
+
+<p>ASP.NET Web Forms and SQL Server based vaccination appointment system.</p>
+
+</div>
+
+</div>
+
+</section>
+  <section class="section" style="padding-top: 1rem;">
+    <div class="section-label">Education</div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-year">2022 — Present</div>
+        <div class="tl-title">Integrated MCA (Master of Computer Applications)</div>
+        <div class="tl-sub">DiST Angamaly · MG University</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">2025</div>
+        <div class="tl-title">AI: Concepts and Techniques</div>
+        <div class="tl-sub">NPTEL SWAYAM — Elite Certificate</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">2020 — 2022</div>
+        <div class="tl-title">Higher Secondary</div>
+        <div class="tl-sub">Commerce Stream</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">Before 2020</div>
+        <div class="tl-title">SSLC</div>
+        <div class="tl-sub">ICSE Syllabus</div>
+      </div>
+
+    </div>
+  </section>
+
+<section class="section" style="padding-top: 0; padding-bottom: 5rem;">
+  <div class="cta-strip">
+    <div>
+      <h3>Let's work together.</h3>
+      <p>Open to internships and freelance projects.</p>
+    </div>
+
+    <a href="contact.html" class="btn-cta-white">Get in Touch →</a>
+  </div>
+</section>
 
 <footer>
   <span>© 2026 Abil K Baby</span>
+  <ul class="footer-nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </footer>
 
 </body>
