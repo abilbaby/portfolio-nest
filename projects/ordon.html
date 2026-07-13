@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORDON Case Study — Organ Transplant Network</title>
+  
+  <!-- SEO -->
+  <meta name="description" content="In-depth technical case study of ORDON, a full-stack organ donation and transplant management database application engineered by Abil K Baby.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- PRE-LOADER -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-title">ORDON / CASE</div>
+      <div class="preloader-progress">0%</div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo-brand">ABIL K.<span> BABY</span></a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../projects.html" class="active">Projects</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../certificates.html">Certificates</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <a href="../assets/documents/Abil_CV_.pdf" class="nav-action-cta" target="_blank" rel="noopener noreferrer">Resume ↗</a>
+      
+      <button class="menu-trigger menu-btn" aria-label="Toggle mobile navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE FULLSCREEN NAVIGATION OVERLAY -->
+  <nav class="mobile-nav" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../projects.html">Projects</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../certificates.html">Certificates</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+      <li><a href="../assets/documents/Abil_CV_.pdf" target="_blank" rel="noopener noreferrer">Resume ↗</a></li>
+    </ul>
+  </nav>
+
+  <!-- CASE STUDY MAIN CONTAINER -->
+  <main class="container">
+    
+    <!-- 01. CASE STUDY HERO -->
+    <section class="case-hero reveal-on-scroll">
+      <span class="section-num" style="color: var(--color-accent-blue);">01 / Case Study</span>
+      <h1 style="font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.03em; margin-top: 0.5rem; max-width: 900px;">
+        ORDON — Organ Transplant <span class="italic-accent">Network</span>
+      </h1>
+      <p style="font-size: 1.2rem; color: var(--color-muted); max-width: 700px; margin-top: 0.8rem;">
+        A self-initiated full-stack platform designed to solve donor-recipient coordination complexities by implementing secure access layers and logical matching algorithms.
+      </p>
+
+      <div class="case-hero-meta-grid">
+        <div class="case-meta-item">
+          <div class="lbl">Role</div>
+          <div class="val">Full Stack Developer</div>
+        </div>
+        <div class="case-meta-item">
+          <div class="lbl">Type</div>
+          <div class="val">Independent System</div>
+        </div>
+        <div class="case-meta-item">
+          <div class="lbl">Stack</div>
+          <div class="val">Laravel / PHP / MySQL</div>
+        </div>
+        <div class="case-meta-item">
+          <div class="lbl">Project Year</div>
+          <div class="val">2025 — 2026</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. Dominant Case Visual -->
+    <div class="case-image-large reveal-on-scroll">
+      <img src="../assets/images/projects/ordon.png" alt="ORDON Hospital Nodes Dashboard Preview">
+    </div>
+
+    <!-- 03. CASE BODY LAYOUT -->
+    <section class="section" style="padding-top: var(--space-md);">
+      <div class="section-sidebar">
+        <span class="section-num">02 / Overview</span>
+        <h2 class="section-title" style="font-size: 1.8rem;">Project Details</h2>
+      </div>
+
+      <div class="case-body-content reveal-on-scroll">
+        <h3>The Core Problem</h3>
+        <p>
+          Organ donor networks frequently struggle with uncoordinated donor registries, waitlist management errors, and complex medical matches. In emergency situations, manual calculations of compatibility metrics can delay crucial organ distributions. The goal of ORDON was to create a centralized database model capable of automating donor-recipient medical matches and managing secure role workflows.
+        </p>
+
+        <h3>Architectural Solution</h3>
+        <p>
+          ORDON is built upon the Laravel MVC framework, separating routing controls and relational MySQL tables. The database models are structured using strict entity-relationship rules to prevent duplicate patient data. Role-based middleware limits access, ensuring hospital operations, donor registrations, and recipient medical histories remain separate and secure.
+        </p>
+
+        <h3>Weighted Match Algorithm</h3>
+        <p>
+          The system implements a customized database matching query that evaluates compatibility factors in real time:
+        </p>
+        <ul style="padding-left: 1.2rem; margin-bottom: 1.5rem; font-size: 0.98rem; color: var(--color-muted); line-height: 1.75;">
+          <li style="margin-bottom: 0.4rem;"><strong>Blood Compatibility</strong>: Restricts queries to strictly compatible AB/O blood type sets.</li>
+          <li style="margin-bottom: 0.4rem;"><strong>Medical Urgency score</strong>: Prioritizes recipient patients flagged with high clinical criticality.</li>
+          <li style="margin-bottom: 0.4rem;"><strong>Waitlist Duration</strong>: Resolves ties by prioritizing patients with longer waitlist durations.</li>
+          <li style="margin-bottom: 0.4rem;"><strong>Geographic Proximity</strong>: Calculates distance vectors between hospital nodes to minimize organ transit times.</li>
+        </ul>
+
+        <h3>Technical Feature Highlights</h3>
+        <p>
+          In addition to the matching query, ORDON implements several advanced features:
+        </p>
+        <ul style="padding-left: 1.2rem; margin-bottom: 1.5rem; font-size: 0.98rem; color: var(--color-muted); line-height: 1.75;">
+          <li style="margin-bottom: 0.4rem;"><strong>QR Certificates</strong>: Generates verifiable donor registration certificates with encrypted QR verification.</li>
+          <li style="margin-bottom: 0.4rem;"><strong>Emergency Workflow</strong>: One-click hospital node triggers for critical allocation scenarios.</li>
+          <li style="margin-bottom: 0.4rem;"><strong>Audit Logs</strong>: Continuous logging of matching engine adjustments to satisfy security constraints.</li>
+        </ul>
+
+        <h3>Student Reflection & Learnings</h3>
+        <p>
+          Building ORDON taught me how to conceptualize relational database models from scratch. I gained experience in normalising tables, writing composite SQL queries, configuring Laravel middleware security, and using Alpine.js to update matching statistics dynamically without full-page reloads.
+        </p>
+
+        <a href="https://github.com/abilbaby/ordon" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 1.5rem;">
+          Explore Code on GitHub <span class="btn-arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- NEXT PROJECT CTA -->
+  <section class="container section" style="padding-bottom: 6rem; padding-top: 0;">
+    <div class="section-sidebar">
+      <!-- Empty Sidebar spacer -->
+    </div>
+    <div class="cta-banner-wrapper reveal-on-scroll" style="background-color: var(--color-text); padding: var(--space-lg);">
+      <span class="section-num" style="color: var(--color-muted-light); margin-bottom: 0.5rem;">Next Project</span>
+      <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: var(--space-sm);">LIBAM Perfume Store</h2>
+      <a href="../projects.html" class="btn btn-primary" style="background-color: var(--color-bg); color: var(--color-text); border-color: var(--color-bg);">
+        Back to All Projects <span class="btn-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-wrap">
+          <div class="f-brand-title">ABIL K. BABY</div>
+          <div class="f-brand-sub">Integrated MCA Student & Full Stack Developer</div>
+        </div>
+        
+        <div class="footer-grid-links">
+          <div class="footer-links-col">
+            <h4>Menu</h4>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../projects.html">Projects</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../certificates.html">Certificates</a></li>
+              <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Professional</h4>
+            <ul>
+              <li><a href="https://github.com/abilbaby" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="https://linkedin.com/in/abil-k-baby-132a59411" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="mailto:abilkbaby7@gmail.com">Email</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-credits-row">
+        <p>© <span class="dynamic-year">2026</span> Abil K Baby. All rights reserved.</p>
+        <p>Built and designed by Abil K Baby.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CDNs & Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+</html>

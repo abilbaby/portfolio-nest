@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects Index — Abil K Baby</title>
+  
+  <!-- SEO -->
+  <meta name="description" content="Chronological index of full-stack systems, frontend single page applications, and custom database web architectures designed by Abil K Baby.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- PRE-LOADER -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-title">ABIL / WORK</div>
+      <div class="preloader-progress">0%</div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-brand">ABIL K.<span> BABY</span></a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <a href="assets/documents/Abil_CVf.pdf" class="nav-action-cta" target="_blank" rel="noopener noreferrer">Resume ↗</a>
+      
+      <button class="menu-trigger menu-btn" aria-label="Toggle mobile navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE FULLSCREEN NAVIGATION OVERLAY -->
+  <nav class="mobile-nav" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="certificates.html">Certificates</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="assets/documents/Abil_CVf.pdf" target="_blank" rel="noopener noreferrer">Resume ↗</a></li>
+    </ul>
+  </nav>
+
+  <!-- PROJECTS INDEX HERO -->
+  <main class="container" style="padding-top: 150px; min-height: 80vh;">
+    
+    <div class="reveal-on-scroll" style="margin-bottom: var(--space-md);">
+      <span class="section-num" style="color: var(--color-accent-blue);">Work Index</span>
+      <h1 style="font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; margin-top: 0.5rem;">
+        Selected <span class="italic-accent">Projects</span>
+      </h1>
+      <p style="font-size: 1.15rem; color: var(--color-muted); max-width: 600px; margin-top: 0.75rem;">
+        An overview of full-stack networks, frontend applications, and layout contributions built during my studies and internships.
+      </p>
+    </div>
+
+    <!-- HORIZONTAL PROJECT CHRONOLOGY LIST -->
+    <section class="reveal-on-scroll" style="padding-bottom: 7rem;">
+      <div class="projects-index-list">
+        
+        <!-- Row 01: ORDON -->
+        <div class="project-index-row-container">
+          <div class="project-index-row clickable" data-project="ordon">
+            <span class="p-idx-num">01 /</span>
+            <span class="p-idx-year">2025 — 2026</span>
+            <span class="p-idx-title">ORDON</span>
+            <span class="p-idx-category">Organ Transplant Network</span>
+            <span class="p-idx-tech">Laravel · PHP · MySQL</span>
+            <span class="p-idx-arrow">↓</span>
+          </div>
+          <div class="project-index-expanded">
+            <div class="project-index-expanded-inner">
+              <div class="expanded-details-grid">
+                <div class="details-text-col">
+                  <h4>System Overview & Architecture</h4>
+                  <p>A self-initiated full-stack network designed to manage hospital organ inventories, recipient waiting lists, and critical candidate matchings. Employs Laravel MVC, strict relational modeling, and custom SQL queries to resolve donor-recipient pairs by urgency, type compatibility, and location proximity vectors.</p>
+                </div>
+                <div class="details-highlights-col">
+                  <h4>Technical Achievements</h4>
+                  <ul>
+                    <li>Real-time donor-recipient compatibility match logic.</li>
+                    <li>Role-based access levels (Admin, Hospital, Donor, Recipient).</li>
+                    <li>QR verification code generating verifiable registration certificates.</li>
+                  </ul>
+                  <div class="details-action-row">
+                    <a href="https://github.com/abilbaby/ordon" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.8rem;">
+                      View Repository <span class="btn-arrow">↗</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 02: LIBAM Perfume Store -->
+        <div class="project-index-row-container">
+          <div class="project-index-row clickable" data-project="libam">
+            <span class="p-idx-num">02 /</span>
+            <span class="p-idx-year">2026</span>
+            <span class="p-idx-title">LIBAM Perfumes</span>
+            <span class="p-idx-category">Angular Single Page App</span>
+            <span class="p-idx-tech">Angular 18 · RxJS · TypeScript</span>
+            <span class="p-idx-arrow">↓</span>
+          </div>
+          <div class="project-index-expanded">
+            <div class="project-index-expanded-inner">
+              <div class="expanded-details-grid">
+                <div class="details-text-col">
+                  <h4>System Overview & Architecture</h4>
+                  <p>A responsive client-side storefront SPA constructed during a frontend immersion training and internship. Leverages Angular's component hierarchy, structural typings, client-side route guards, and global state streams driven by RxJS BehaviorSubjects to manage catalog listings and cart wishlists.</p>
+                </div>
+                <div class="details-highlights-col">
+                  <h4>Technical Achievements</h4>
+                  <ul>
+                    <li>Asynchronous cart and wishlist streams using RxJS Subjects.</li>
+                    <li>Strict TypeScript modeling for type-safe OOP component code.</li>
+                    <li>Asynchronous checkout gate guards protecting active client routes.</li>
+                  </ul>
+                  <div class="details-action-row">
+                    <a href="https://github.com/abilbaby/perfume-angular-final" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.8rem;">
+                      View Repository <span class="btn-arrow">↗</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 03: Vaccination Scheduling System -->
+        <div class="project-index-row-container">
+          <div class="project-index-row clickable" data-project="vaccine">
+            <span class="p-idx-num">03 /</span>
+            <span class="p-idx-year">2024</span>
+            <span class="p-idx-title">Vaccine Scheduling</span>
+            <span class="p-idx-category">Clinic Workflows Database</span>
+            <span class="p-idx-tech">ASP.NET Forms · C# · SQL Server</span>
+            <span class="p-idx-arrow">↓</span>
+          </div>
+          <div class="project-index-expanded">
+            <div class="project-index-expanded-inner">
+              <div class="expanded-details-grid">
+                <div class="details-text-col">
+                  <h4>System Overview & Architecture</h4>
+                  <p>An academic full-stack database application designed to streamline baby immunization schedules, pediatric appointment diaries, and clinical inventory. Engineered in ASP.NET Web Forms and ADO.NET backend logic, connected to a normalized Microsoft SQL Server database schema.</p>
+                </div>
+                <div class="details-highlights-col">
+                  <h4>Technical Achievements</h4>
+                  <ul>
+                    <li>Fully normalized relational database schema with referential integrity.</li>
+                    <li>Clinic patient scheduling portals and appointment calendars.</li>
+                    <li>Automatic clinic stock tracking and vaccine log listings.</li>
+                  </ul>
+                  <div class="details-action-row">
+                    <a href="https://github.com/abilbaby" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.8rem;">
+                      View Repository <span class="btn-arrow">↗</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 04: Homeegram -->
+        <a href="https://homeegram.com" target="_blank" rel="noopener noreferrer" class="project-index-row">
+          <span class="p-idx-num">04 /</span>
+          <span class="p-idx-year">2024</span>
+          <span class="p-idx-title">Homeegram</span>
+          <span class="p-idx-category">Business UI Frontend</span>
+          <span class="p-idx-tech">HTML5 · CSS3 · Responsive</span>
+          <span class="p-idx-arrow">↗</span>
+        </a>
+
+        <!-- Row 05: Homeeframes -->
+        <a href="https://homeeframes.com" target="_blank" rel="noopener noreferrer" class="project-index-row">
+          <span class="p-idx-num">05 /</span>
+          <span class="p-idx-year">2023</span>
+          <span class="p-idx-title">Homeeframes</span>
+          <span class="p-idx-category">CSS Design & Layouts</span>
+          <span class="p-idx-tech">CSS3 · Flexbox Grid Layout</span>
+          <span class="p-idx-arrow">↗</span>
+        </a>
+
+        <!-- Row 06: Akash Travels -->
+        <a href="https://aakashtravel.in/" target="_blank" rel="noopener noreferrer" class="project-index-row">
+          <span class="p-idx-num">06 /</span>
+          <span class="p-idx-year">2023</span>
+          <span class="p-idx-title">Akash Travels</span>
+          <span class="p-idx-category">Travel Agency Portal UI</span>
+          <span class="p-idx-tech">HTML5 · CSS Navigation</span>
+          <span class="p-idx-arrow">↗</span>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-wrap">
+          <div class="f-brand-title">ABIL K. BABY</div>
+          <div class="f-brand-sub">Integrated MCA Student & Full Stack Developer</div>
+        </div>
+        
+        <div class="footer-grid-links">
+          <div class="footer-links-col">
+            <h4>Menu</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="certificates.html">Certificates</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Professional</h4>
+            <ul>
+              <li><a href="https://github.com/abilbaby" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="https://linkedin.com/in/abil-k-baby-132a59411" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="mailto:abilkbaby7@gmail.com">Email</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-credits-row">
+        <p>© <span class="dynamic-year">2026</span> Abil K Baby. All rights reserved.</p>
+        <p>Built and designed by Abil K Baby.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CDNs & Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
