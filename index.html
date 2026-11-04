@@ -6,665 +6,1342 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO Optimization -->
-  <title>Abil K Baby — Integrated MCA Student & Full Stack Developer</title>
+  <title>Abil K Baby — Integrated MCA Student</title>
   <meta name="description"
-    content="Portfolio of Abil K Baby, showcasing technical engineering projects, full-stack Laravel systems, type-safe Angular builds, and relational databases.">
+    content="Personal portfolio of Abil K Baby — Integrated MCA Student. Hands-on full-stack development experience with Laravel, PHP, Angular, C#, and MySQL.">
   <meta name="keywords"
-    content="Abil K Baby, Full Stack Developer, Laravel, Angular, C#, ASP.NET, Kerala, Student Portfolio">
+    content="Abil K Baby, Full Stack Developer, Software Engineer, Laravel, Angular, C#, ASP.NET, MySQL, Integrated MCA Student">
   <meta name="author" content="Abil K Baby">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Abil K Baby — Integrated MCA Student & Full Stack Developer">
+  <meta property="og:title" content="Abil K Baby — Integrated MCA Student">
   <meta property="og:description"
-    content="Explore advanced student full-stack systems and frontend single-page applications.">
+    content="Integrated MCA student with hands-on full-stack development experience using Laravel, PHP, Angular, C#, and MySQL. Creator of ORDON.">
   <meta property="og:image" content="assets/images/profile/abi.jpeg">
-  <meta property="og:site_name" content="Abil K Baby Portfolio">
+  <meta property="og:url" content="https://abilkbaby.netlify.app/">
 
-  <!-- Preconnect & Fonts -->
+  <link rel="canonical" href="https://abilkbaby.netlify.app/">
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif), Inter (Clean Sans), JetBrains Mono (Technical Monospace) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
-  <!-- Main Stylesheet -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <!-- PRE-LOADER -->
-  <div class="preloader" aria-hidden="true">
-    <div class="preloader-content">
-      <div class="preloader-title">ABIL / 2026</div>
-      <div class="preloader-progress">0%</div>
-    </div>
-  </div>
-
-  <!-- STICKY HEADER NAVIGATION -->
-  <header class="header">
+  <!-- ── 1. FLOATING DOCKED GLASS NAVIGATION BAR ── -->
+  <header class="header" role="banner" id="main-header">
     <div class="container nav-container">
-      <a href="index.html" class="logo-brand">ABIL K.<span> BABY</span></a>
 
-      <nav aria-label="Main Navigation">
-        <ul class="nav-menu">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="certificates.html">Certificates</a></li>
-          <li><a href="#contact">Contact</a></li>
+      <!-- Left: A.K. Brand Mark -->
+      <a href="#home" class="brand-mark" aria-label="Abil K Baby — Home">
+        <span class="brand-text">A.K.</span>
+        <span class="brand-dot" aria-hidden="true">.</span>
+      </a>
+
+      <!-- Center: Navigation Menu -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-links" role="list">
+          <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+          <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+          <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+          <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+          <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+          <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
         </ul>
       </nav>
 
-      <a href="assets/documents/Abil_CVf.pdf" class="nav-action-cta" target="_blank" rel="noopener noreferrer">Resume
-        ↗</a>
+      <!-- Right: Social & Resume Links -->
+      <div class="nav-actions">
+        <a href="https://github.com/abilbaby" class="nav-icon-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/abil-k-baby-132a59411" class="nav-icon-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+        <a href="assets/documents/Abil_CVf.pdf" class="btn-resume-nav" target="_blank" rel="noopener noreferrer">
+          Resume <span class="arrow-diag" aria-hidden="true">↗</span>
+        </a>
+      </div>
 
-      <button class="menu-btn" aria-label="Toggle mobile navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
       </button>
+
     </div>
   </header>
 
-  <!-- MOBILE FULLSCREEN NAVIGATION OVERLAY -->
-  <nav class="mobile-nav" aria-hidden="true">
-    <ul class="mobile-nav-list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="certificates.html">Certificates</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="assets/documents/Abil_CVf.pdf" target="_blank" rel="noopener noreferrer">Resume ↗</a></li>
-    </ul>
-    <div class="mobile-nav-meta">
-      <div>
-        <span class="section-num">Networks</span>
-        <a href="https://github.com/abilbaby" target="_blank" rel="noopener noreferrer"
-          style="font-size: 1rem; color: var(--color-text); text-decoration: none; font-weight: 500; display: block; margin-top: 0.35rem;">GitHub
-          ↗</a>
-        <a href="https://linkedin.com/in/abil-k-baby-132a59411" target="_blank" rel="noopener noreferrer"
-          style="font-size: 1rem; color: var(--color-text); text-decoration: none; font-weight: 500; display: block; margin-top: 0.35rem;">LinkedIn
-          ↗</a>
-      </div>
-      <div>
-        <span class="section-num">Direct Email</span>
-        <a href="mailto:abilkbaby7@gmail.com"
-          style="font-size: 1rem; color: var(--color-text); text-decoration: none; font-weight: 500; display: block; margin-top: 0.35rem;">abilkbaby7@gmail.com</a>
+  <!-- ── MOBILE NAVIGATION OVERLAY ── -->
+  <nav class="mobile-menu" id="mobile-menu" aria-hidden="true" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-menu-inner">
+      <ul class="mobile-nav-list" role="list">
+        <li><a href="#home" class="mobile-link">Home</a></li>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#projects" class="mobile-link">Projects</a></li>
+        <li><a href="#experience" class="mobile-link">Experience</a></li>
+        <li><a href="#skills" class="mobile-link">Skills</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+      <div class="mobile-actions">
+        <a href="assets/documents/Abil_CVf.pdf" class="btn-primary" target="_blank" rel="noopener noreferrer">Download Resume ↗</a>
+        <div class="mobile-social-row">
+          <a href="https://github.com/abilbaby" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span class="sep">/</span>
+          <a href="https://linkedin.com/in/abil-k-baby-132a59411" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <span class="sep">/</span>
+          <a href="mailto:abilkbaby7@gmail.com">Email</a>
+        </div>
       </div>
     </div>
   </nav>
 
-  <!-- 02. HERO SECTION -->
-  <section class="container hero">
-    <div class="hero-layout">
-      <div class="hero-content">
-        <div class="hero-eyebrow-row">
-          <div class="hero-badge-status">
-            <span class="hero-pulse-dot"></span>
-            Open to opportunities
+  <main id="content">
+
+    <!-- ══════════════════════════════════════════════
+         2. HERO SECTION (Asymmetric Editorial Canvas)
+    ══════════════════════════════════════════════════ -->
+    <section class="hero-section" id="home" aria-label="Introduction">
+      <div class="hero-light-field-1" aria-hidden="true"></div>
+      <div class="hero-light-field-2" aria-hidden="true"></div>
+
+      <div class="container hero-editorial-canvas">
+
+        <!-- Top System Status Strip -->
+        <div class="hero-status-strip">
+          <div class="hero-pre-badge">
+            <span class="hero-tag-text">SOFTWARE ENGINEERING</span>
+            <span class="hero-tag-line" aria-hidden="true"></span>
           </div>
-          <span class="hero-badge-loc">Kerala, India</span>
         </div>
 
-        <h1 class="hero-heading">
-          <span class="reveal-mask"><span class="reveal-inner">Building practical web applications through code & structured thinking.</span></span>
+        <!-- Master Asymmetric Stage Grid -->
+        <div class="hero-stage-grid">
 
-        </h1>
+          <!-- Left Side: Editorial Typography, Summary & Actions -->
+          <div class="hero-stage-left">
+            <h1 class="hero-title">
+              <span class="hero-name-primary">ABIL K</span>
+              <span class="hero-name-secondary">BABY</span>
+            </h1>
 
-        <p class="hero-description">
-Integrated MCA Student and aspiring Full Stack Developer focused on building practical web applications and turning ideas into clean, functional, and well-structured digital solutions.
-        </p>
+            <p class="hero-role-title">Integrated MCA Student</p>
 
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">View Projects <span class="btn-arrow">↘</span></a>
-          <a href="assets/documents/Abil_CVf.pdf" class="btn btn-secondary" target="_blank"
-            rel="noopener noreferrer">Download CV <span class="btn-arrow-down">↓</span></a>
+            <p class="hero-summary-copy">
+              Integrated MCA student with hands-on full-stack development experience using Laravel, PHP, Angular, C#, and MySQL. Built ORDON, a multi-role organ donation and transplant management platform tested and certified by D’Soft Solutions, and completed a frontend development internship at NeST Digital Academy. Experienced in object-oriented programming, relational database design, and web application development.
+            </p>
+
+            <div class="hero-actions-row">
+              <a href="#projects" class="btn-primary">
+                <span>Explore Systems</span>
+                <span class="btn-icon-arrow" aria-hidden="true">↘</span>
+              </a>
+              <a href="#contact" class="btn-secondary">
+                <span>Initiate Contact</span>
+                <span class="arrow-diag" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Side: Sculptural Frosted Glass Portal Housing Portrait -->
+          <div class="hero-stage-right">
+            <div class="portrait-sculptural-portal">
+
+              <!-- Luminous Glacial Glow Halo -->
+              <div class="portal-glow-halo" aria-hidden="true"></div>
+
+              <!-- Translucent Glass Backplane -->
+              <div class="portal-glass-plane" aria-hidden="true"></div>
+
+              <!-- Delicate Accent Geometry -->
+              <div class="portal-accent-geometry" aria-hidden="true"></div>
+
+              <!-- Main Framed Portrait (Replaceable asset) -->
+              <div class="portrait-frame">
+                <img
+                  src="assets/images/profile/abi.png"
+                  alt="Portrait of Abil K Baby, Integrated MCA Student"
+                  class="portrait-img"
+                  loading="eager"
+                  width="450"
+                  height="540">
+                <div class="portrait-inner-frame" aria-hidden="true"></div>
+              </div>
+
+            </div>
+          </div>
+
         </div>
+
       </div>
+    </section>
 
-      <div class="hero-photo-wrap">
-        <div class="hero-photo-frame">
-          <img src="assets/images/profile/abi.jpeg" alt="Abil K Baby Portrait" class="hero-photo-img">
-          <span class="hero-photo-label">CS Student</span>
+    <!-- ══════════════════════════════════════════════
+         3. ABOUT SECTION (Deconstructed Editorial Spread)
+    ══════════════════════════════════════════════════ -->
+    <section class="section about-section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+
+        <div class="section-top-bar">
+          <span class="section-num">01 / PERSPECTIVE</span>
+          <h2 class="section-title" id="about-heading">Engineering &amp; <span class="text-ice">Approach</span></h2>
+          <div class="section-line" aria-hidden="true"></div>
         </div>
+
+        <div class="about-editorial-grid">
+
+          <!-- Left Narrative -->
+          <div class="about-narrative-block">
+            <h3 class="about-lead-statement">
+              Building software with structure, purpose, and precision.
+            </h3>
+
+            <p class="about-body">
+              I am an AI-Assisted Full Stack Developer focused on building modern web applications, scalable systems, and practical digital solutions.
+            </p>
+
+            <p class="about-body">
+              My approach combines full-stack engineering, thoughtful database design, clean architecture, and AI-assisted development to turn functional requirements into reliable software.
+            </p>
+
+            <p class="about-body">
+              From developing multi-role applications with Laravel to building responsive Angular interfaces, I focus on maintainable code, efficient workflows, and meaningful user experiences.
+            </p>
+
+            <!-- Tri-Pillar Architecture -->
+            <div class="about-pillars-grid">
+              <div class="pillar-card">
+                <span class="pillar-index">01</span>
+                <h4>Web &amp; Frontend</h4>
+                <p>Component-driven SPAs in Angular 18 with RxJS, TypeScript, Tailwind CSS, and responsive layout modeling.</p>
+              </div>
+
+              <div class="pillar-card">
+                <span class="pillar-index">02</span>
+                <h4>Backend &amp; Frameworks</h4>
+                <p>MVC application logic, role-based access control, workflow modeling, and CRUD services in Laravel and ASP.NET.</p>
+              </div>
+
+              <div class="pillar-card">
+                <span class="pillar-index">03</span>
+                <h4>Database Architecture</h4>
+                <p>Relational database design in MySQL and SQL Server, normalized schema structure, query design, and data integrity.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Experience & Education Progression -->
+          <div class="about-education-block">
+            <div class="education-editorial-box">
+              <div class="box-header">
+                <span class="box-tag">CAREER &amp; ACADEMICS</span>
+                <h3>Experience &amp; Education</h3>
+              </div>
+
+              <div class="education-steps-list">
+                <div class="edu-step">
+                  <div class="step-bullet" aria-hidden="true"></div>
+                  <div class="step-body">
+                    <span class="edu-years">March – April 2026</span>
+                    <h4 class="edu-degree">Frontend Development Intern</h4>
+                    <p class="edu-school">NeST Digital Academy</p>
+                    <span class="edu-uni">NeST Digital · Kerala</span>
+                    <p class="edu-details">
+                      Industry immersion in Angular 18 single-page application development, component architectures, and RxJS state streams.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="edu-step">
+                  <div class="step-bullet" aria-hidden="true"></div>
+                  <div class="step-body">
+                    <span class="edu-years">2022 — Present</span>
+                    <h4 class="edu-degree">Integrated MCA</h4>
+                    <p class="edu-school">De Paul Institute of Science &amp; Technology, Angamaly</p>
+                    <span class="edu-uni">MG University, Kerala</span>
+                    <p class="edu-details">
+                      Advanced coursework in Object-Oriented Programming, Database Management Systems, Data Structures &amp; Algorithms, and Web Architectures.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="edu-step">
+                  <div class="step-bullet" aria-hidden="true"></div>
+                  <div class="step-body">
+                    <span class="edu-years">2020 — 2022</span>
+                    <h4 class="edu-degree">Higher Secondary Education</h4>
+                    <p class="edu-school">Commerce Stream</p>
+                    <span class="edu-uni">Kerala State Board</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
       </div>
-    </div>
+    </section>
 
-    <div class="hero-footer">
-      <a href="#intro" class="scroll-prompt">
-        <div class="scroll-prompt-circle">↓</div>
-        Scroll to discover
-      </a>
+    <!-- ══════════════════════════════════════════════
+         4. PROJECTS SECTION (Non-Card Experimental Presentations)
+    ══════════════════════════════════════════════════ -->
+    <section class="section projects-section" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
 
-      <div class="hero-stats">
-        <div class="hero-stat-block">
-          <div class="stat-num">PROJECT DRIVEN</div>
-          <div class="stat-lbl">LEARNING BY BUILDING</div>
+        <div class="section-top-bar">
+          <span class="section-num">02 / ARCHITECTURE</span>
+          <h2 class="section-title" id="projects-heading">Selected <span class="text-ice">Systems</span></h2>
+          <div class="section-line" aria-hidden="true"></div>
         </div>
-        <div class="hero-stat-block">
-          <div class="stat-num">8+</div>
-          <div class="stat-lbl">Projects Built</div>
+
+        <div class="projects-showcase-flow">
+
+          <!-- ── PROJECT 01: ORDON (Balanced Architectural Showcase) ── -->
+          <article class="project-balanced-showcase" aria-labelledby="proj-ordon-title">
+            <div class="project-split-details">
+              <div class="proj-eyebrow">
+                <span class="proj-index-num">SYSTEM 01 // TRANSPLANT NETWORK</span>
+                <span class="proj-date-badge">2026</span>
+              </div>
+
+              <div class="proj-badge-row">
+                <span class="proj-cert-tag">Tested &amp; Certified at D’Soft Solutions</span>
+              </div>
+
+              <h3 class="proj-main-title" id="proj-ordon-title">ORDON</h3>
+              <h4 class="proj-role-subtitle">Organ Donation &amp; Transplant Management System</h4>
+
+              <p class="proj-summary">
+                Designed and developed a multi-role platform for Admin, Hospital, Donor, and Recipient users. Implemented weighted donor-recipient matching based on medical compatibility, role-based access control, emergency organ request workflows, and audit logging of state transitions.
+              </p>
+
+              <ul class="proj-key-points">
+                <li>Weighted donor-recipient matching based on medical compatibility criteria</li>
+                <li>Role-based access control across Admin, Hospital, Donor, and Recipient tiers</li>
+                <li>Emergency organ request workflows with comprehensive state audit logging</li>
+                <li>Hospital-managed transplant coordination and automated notifications</li>
+              </ul>
+
+              <div class="tech-pill-row">
+                <span class="tech-pill-light">Laravel 13</span>
+                <span class="tech-pill-light">PHP 8.3</span>
+                <span class="tech-pill-light">MySQL</span>
+                <span class="tech-pill-light">Tailwind CSS</span>
+                <span class="tech-pill-light">Alpine.js</span>
+              </div>
+
+              <div class="proj-actions">
+                <a href="https://github.com/abilbaby/ordon" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                  <span>View Repository on GitHub</span>
+                  <span class="arrow-diag" aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Cover Image Canvas (Mandatory rule: object-fit: contain, uncropped) -->
+            <div class="project-split-visual">
+              <img
+                src="assets/images/projects/ordon.png"
+                alt="ORDON — Organ Donation and Transplant Management System full interface view"
+                class="project-unclipped-contain-img"
+                loading="lazy">
+            </div>
+          </article>
+
+          <!-- ── PROJECT 02: CHILD VACCINATION SYSTEM (Balanced Blueprint Showcase) ── -->
+          <article class="project-balanced-showcase project-reverse-split" aria-labelledby="proj-vaccine-title">
+            <!-- Full Unclipped Cover Image with contain -->
+            <div class="project-split-visual">
+              <img
+                src="assets/images/projects/vaccine.png"
+                alt="Child Vaccination Scheduling System user interface preview"
+                class="project-unclipped-contain-img"
+                loading="lazy">
+            </div>
+
+            <div class="project-split-details">
+              <div class="proj-eyebrow">
+                <span class="proj-index-num">SYSTEM 02 // CLINICAL DATABASE</span>
+                <span class="proj-date-badge">2024</span>
+              </div>
+
+              <div class="proj-badge-row">
+                <span class="proj-cert-tag">ASP.NET &amp; SQL Server Architecture</span>
+              </div>
+
+              <h3 class="proj-main-title" id="proj-vaccine-title">Child Vaccination Scheduling &amp; Appointment Management System</h3>
+              <h4 class="proj-role-subtitle">Clinic Scheduling &amp; Immunization Database</h4>
+
+              <p class="proj-summary">
+                Developed a vaccination scheduling and appointment management system using C# and ASP.NET Web Forms. Implemented CRUD operations, object-oriented business logic, and designed a normalized relational database in SQL Server for clinic appointment workflows.
+              </p>
+
+              <ul class="proj-key-points">
+                <li>Multi-dose immunization scheduling and clinic appointment calendar</li>
+                <li>Object-oriented CRUD operational logic and service components</li>
+                <li>Normalized relational database schema design in SQL Server</li>
+                <li>Defensive form validation and appointment status tracking</li>
+              </ul>
+
+              <div class="tech-pill-row">
+                <span class="tech-pill-light">C#</span>
+                <span class="tech-pill-light">ASP.NET Web Forms</span>
+                <span class="tech-pill-light">SQL Server</span>
+                <span class="tech-pill-light">Relational Normalization</span>
+              </div>
+
+              <div class="proj-actions">
+                <a href="https://github.com/abilbaby" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                  <span>Explore Repository</span>
+                  <span class="arrow-diag" aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── PROJECT 03: FREELANCE FRONTEND (Interactive 3-Site Carousel Showcase) ── -->
+          <article class="project-balanced-showcase freelance-carousel-card" aria-labelledby="proj-freelance-title">
+            <div class="freelance-header-bar">
+              <div>
+                <div class="proj-eyebrow">
+                  <span class="proj-index-num">SYSTEM 03 // CLIENT WEBSITES</span>
+                  <span class="proj-date-badge">2023 — 2025</span>
+                </div>
+                <h3 class="proj-main-title" id="proj-freelance-title">Freelance Frontend Development</h3>
+                <h4 class="proj-role-subtitle">Interactive Commercial Client Deployments</h4>
+              </div>
+
+              <!-- Slider Navigation Controls -->
+              <div class="freelance-slider-controls">
+                <span class="freelance-counter" aria-live="polite">
+                  <span id="freelance-curr-idx">01</span> / 03
+                </span>
+                <div class="freelance-btn-group">
+                  <button type="button" class="slider-arrow-btn" id="freelance-prev-btn" aria-label="Previous client website">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                  </button>
+                  <button type="button" class="slider-arrow-btn" id="freelance-next-btn" aria-label="Next client website">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Freelance Carousel Viewport -->
+            <div class="freelance-slider-viewport" id="freelance-viewport" tabindex="0" role="region" aria-label="Client Websites Carousel">
+              <div class="freelance-slider-track" id="freelance-track">
+
+                <!-- Slide 1: Homeegram -->
+                <div class="freelance-slide active" data-slide-index="0" role="group" aria-label="Slide 1 of 3: Homeegram">
+                  <div class="freelance-slide-grid">
+                    <div class="freelance-slide-visual">
+                      <img
+                        src="assets/images/projects/homeegram.png"
+                        alt="Homeegram — Architecture and Interior Design Studio website preview"
+                        class="project-unclipped-contain-img"
+                        loading="lazy">
+                    </div>
+                    <div class="freelance-slide-content">
+                      <div class="slide-meta-row">
+                        <span class="slide-client-badge">CLIENT 01</span>
+                        <span class="slide-category">Architecture &amp; Interior Design</span>
+                      </div>
+                      <h4 class="slide-client-title">Homeegram</h4>
+                      <p class="slide-description">
+                        Designed and built a responsive frontend web experience for an architecture and interior design studio. Created bespoke project showcase galleries, clean responsive layouts, and structured project inquiry workflows.
+                      </p>
+                      <div class="tech-pill-row">
+                        <span class="tech-pill-light">HTML5</span>
+                        <span class="tech-pill-light">CSS3</span>
+                        <span class="tech-pill-light">JavaScript</span>
+                        <span class="tech-pill-light">Responsive Grid</span>
+                      </div>
+                      <div class="slide-cta-row">
+                        <a href="https://homeegram.com" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                          <span>Visit Website</span>
+                          <span class="arrow-diag" aria-hidden="true">↗</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2: Homeeframes -->
+                <div class="freelance-slide" data-slide-index="1" role="group" aria-label="Slide 2 of 3: Homeeframes">
+                  <div class="freelance-slide-grid">
+                    <div class="freelance-slide-visual">
+                      <img
+                        src="assets/images/projects/homeeframes.png"
+                        alt="Homeeframes — Custom Framing Atelier and Storefront website preview"
+                        class="project-unclipped-contain-img"
+                        loading="lazy">
+                    </div>
+                    <div class="freelance-slide-content">
+                      <div class="slide-meta-row">
+                        <span class="slide-client-badge">CLIENT 02</span>
+                        <span class="slide-category">Bespoke Framing Atelier</span>
+                      </div>
+                      <h4 class="slide-client-title">Homeeframes</h4>
+                      <p class="slide-description">
+                        Built a modern commercial storefront website for a bespoke framing atelier. Designed interactive product galleries presenting custom frame styles, material preservation details, and client consultation booking interfaces.
+                      </p>
+                      <div class="tech-pill-row">
+                        <span class="tech-pill-light">HTML5</span>
+                        <span class="tech-pill-light">CSS3</span>
+                        <span class="tech-pill-light">JavaScript</span>
+                        <span class="tech-pill-light">Commercial UI</span>
+                      </div>
+                      <div class="slide-cta-row">
+                        <a href="https://homeeframes.com" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                          <span>Visit Website</span>
+                          <span class="arrow-diag" aria-hidden="true">↗</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 3: Akash Travels -->
+                <div class="freelance-slide" data-slide-index="2" role="group" aria-label="Slide 3 of 3: Akash Travels">
+                  <div class="freelance-slide-grid">
+                    <div class="freelance-slide-visual">
+                      <img
+                        src="assets/images/projects/aakash-travel.png"
+                        alt="Akash Travels — Tour Packages & Travel Agency website preview"
+                        class="project-unclipped-contain-img"
+                        loading="lazy">
+                    </div>
+                    <div class="freelance-slide-content">
+                      <div class="slide-meta-row">
+                        <span class="slide-client-badge">CLIENT 03</span>
+                        <span class="slide-category">Tourism &amp; Travel Operations</span>
+                      </div>
+                      <h4 class="slide-client-title">Akash Travels</h4>
+                      <p class="slide-description">
+                        Engineered a fast and accessible web presence for a travel and tour operations agency. Showcases holiday packages, vehicle fleet specifications, custom itinerary inquiries, and integrated customer communication channels.
+                      </p>
+                      <div class="tech-pill-row">
+                        <span class="tech-pill-light">HTML5</span>
+                        <span class="tech-pill-light">CSS3</span>
+                        <span class="tech-pill-light">JavaScript</span>
+                        <span class="tech-pill-light">Tour Showcase</span>
+                      </div>
+                      <div class="slide-cta-row">
+                        <a href="https://aakashtravel.in/" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                          <span>Visit Website</span>
+                          <span class="arrow-diag" aria-hidden="true">↗</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Dots Indicator Bar -->
+            <div class="freelance-dots-bar" role="tablist" aria-label="Slide Selection">
+              <button type="button" class="slider-dot active" data-slide-to="0" role="tab" aria-selected="true" aria-label="Go to Homeegram slide">
+                <span class="dot-inner"></span>
+                <span class="dot-label">Homeegram</span>
+              </button>
+              <button type="button" class="slider-dot" data-slide-to="1" role="tab" aria-selected="false" aria-label="Go to Homeeframes slide">
+                <span class="dot-inner"></span>
+                <span class="dot-label">Homeeframes</span>
+              </button>
+              <button type="button" class="slider-dot" data-slide-to="2" role="tab" aria-selected="false" aria-label="Go to Akash Travels slide">
+                <span class="dot-inner"></span>
+                <span class="dot-label">Akash Travels</span>
+              </button>
+            </div>
+
+          </article>
+
         </div>
-        <div class="hero-stat-block">
-          <div class="stat-num">6+</div>
-          <div class="stat-lbl">Technologies</div>
-        </div>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <hr class="divider line-draw container">
+    <!-- ══════════════════════════════════════════════
+         5. EXPERIENCE SECTION (Architectural Stage)
+    ══════════════════════════════════════════════════ -->
+    <section class="section experience-section" id="experience" aria-labelledby="exp-heading">
+      <div class="container">
 
-  <!-- 03. INTRODUCTORY STATEMENT -->
-  <section class="container section" id="intro">
-    <div class="section-sidebar">
-      <span class="section-num">01 / Introduction</span>
-      <h2 class="section-title">Approach</h2>
-    </div>
+        <div class="section-top-bar">
+          <span class="section-num">03 / EXPERIENCE</span>
+          <h2 class="section-title" id="exp-heading">Professional <span class="text-ice">Experience</span></h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
 
-    <div class="intro-statement-wrap reveal-on-scroll">
-      <p class="intro-statement-text">
-        I focus on understanding what needs to be built, structuring how it should work, and turning requirements into
-        functional web applications.
-      </p>
-      <p class="intro-statement-sub">
-        Currently pursuing an Integrated Master of Computer Applications (MCA) at De Paul Institute of Science & Technology Angamaly under MG University,
-        Kerala. Combining academic algorithms, collaborative internship sprints, and independent project architecture, I
-        build full-stack logic and relational databases that scale cleanly.
-      </p>
-    </div>
-  </section>
+        <div class="experience-architectural-stage">
+          <div class="exp-stage-header">
+            <div>
+              <span class="exp-type-tag">FRONTEND INTERNSHIP</span>
+              <h3 class="exp-title">Frontend Development Intern</h3>
+              <h4 class="exp-company">NeST Digital Academy, NeST Digital · Kerala</h4>
+            </div>
+            <div class="exp-timeframe-box">
+              <span>March – April 2026</span>
+            </div>
+          </div>
 
-  <hr class="divider line-draw container">
-
-  <!-- 04. SELECTED PROJECTS -->
-  <section class="container section" id="projects">
-    <div class="section-sidebar">
-      <span class="section-num">02 / Portfolio</span>
-      <h2 class="section-title">Featured Projects</h2>
-      <p class="section-subtitle">A collection of custom builds focused on database modeling and backend architecture.
-      </p>
-    </div>
-
-    <div class="projects-container">
-
-      <!-- PROJECT 01: ORDON (FLAGSHIP) -->
-      <article class="project-block reveal-on-scroll">
-        <div class="project-details-wrap">
-          <span class="project-badge-num">Project 01 / Flagship</span>
-          <h3 class="project-display-title">ORDON</h3>
-          <span class="project-display-subtitle">Organ Donation & Transplant Network</span>
-          <p class="project-display-desc">
-            A self-initiated full-stack platform designed to solve donor-recipient coordination complexities by
-            implementing secure access layers and logical matching algorithms.
-          </p>
-          <ul class="project-key-highlights">
-            <li>Weighted donor-recipient medical compatibility matchmaking query.</li>
-            <li>Role-based access levels (Admin, Hospital, Donor, Recipient).</li>
-            <li>Embedded QR codes for verifiable digital donation certificates.</li>
-            <li>Real-time notifications, emergency requests, and secure audit logging.</li>
+          <ul class="exp-details-list">
+            <li>Completed a five-day Angular 18 industry immersion program followed by a one-month internship focused on single-page application development.</li>
+            <li>Built LIBAM Perfume Store, an Angular 18 SPA with product listing, product detail, wishlist, and contact pages using Angular Router and RxJS.</li>
+            <li>Applied component-based architecture, TypeScript, and reusable frontend components.</li>
           </ul>
-          <div class="tags-wrap">
-            <span class="tag-badge">Laravel 13</span>
-            <span class="tag-badge">PHP 8.3</span>
-            <span class="tag-badge">MySQL</span>
-            <span class="tag-badge">Tailwind CSS</span>
-            <span class="tag-badge">Alpine.js</span>
-          </div>
-          <div style="display: flex; gap: 1.5rem;">
-            <a href="projects/ordon.html" class="project-action-link">Read Case Study <span>↗</span></a>
-            <a href="https://github.com/abilbaby/ordon" class="project-action-link" target="_blank"
-              rel="noopener noreferrer">View Code <span>↗</span></a>
-          </div>
-        </div>
 
-        <div class="project-media-wrap">
-          <div class="browser-frame-wrap">
-            <div class="browser-bar-top">
-              <div class="browser-circle-dots">
-                <span class="browser-circle-dot red"></span>
-                <span class="browser-circle-dot yellow"></span>
-                <span class="browser-circle-dot green"></span>
-              </div>
-              <div class="browser-address-field">
-                <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
-                  <path d="M6 2a4 4 0 100 8 4 4 0 000-8z" stroke="currentColor" stroke-width="1.2" />
-                </svg>
-                github.com/abilbaby/ordon
-              </div>
+          <div class="exp-proof-strip">
+            <div class="exp-project-spec">
+              <span class="spec-dot" aria-hidden="true"></span>
+              <span>LIBAM Perfume Store SPA (Angular 18 · TypeScript · RxJS)</span>
             </div>
-            <div class="browser-frame-body">
-              <img src="assets/images/projects/ordon.png" alt="ORDON Dashboard Preview">
+            <div class="exp-actions-group">
+              <a href="assets/documents/Internship.pdf" class="btn-cert-link" target="_blank" rel="noopener noreferrer">
+                <span>View Internship Certificate</span>
+                <span class="arrow-diag" aria-hidden="true">↗</span>
+              </a>
             </div>
           </div>
         </div>
-      </article>
 
-      <!-- PROJECT 02: LIBAM PERFUME STORE (NEST INTERNSHIP) -->
-      <article class="project-block reveal-on-scroll">
-        <div class="project-details-wrap">
-          <span class="project-badge-num">Project 02 / Internship</span>
-          <h3 class="project-display-title">LIBAM Store</h3>
-          <span class="project-display-subtitle">Angular 18 Single Page Application</span>
-          <p class="project-display-desc">
-            A responsive single-page storefront application built during my training internship at NeST Digital Academy,
-            utilizing reactive states and component mapping.
-          </p>
-          <ul class="project-key-highlights">
-            <li>Dynamic catalog, product detail pages, and custom user wishlists.</li>
-            <li>Configured component hierarchy with strict TypeScript typings.</li>
-            <li>Managed application states with RxJS BehaviorSubjects.</li>
-            <li>Client-side route guards and asynchronous data stream binding.</li>
-          </ul>
-          <div class="tags-wrap">
-            <span class="tag-badge">Angular 18</span>
-            <span class="tag-badge">TypeScript</span>
-            <span class="tag-badge">RxJS</span>
-            <span class="tag-badge">Tailwind CSS</span>
-            <span class="tag-badge">HTML5 / CSS3</span>
-          </div>
-          <a href="https://github.com/abilbaby" class="project-action-link" target="_blank"
-            rel="noopener noreferrer">View Repository <span>↗</span></a>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         6. TECHNICAL SKILLS SECTION (Interactive Matrix)
+    ══════════════════════════════════════════════════ -->
+    <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+
+        <div class="section-top-bar">
+          <span class="section-num">04 / PROFICIENCY</span>
+          <h2 class="section-title" id="skills-heading">Technical <span class="text-ice">Skills</span></h2>
+          <div class="section-line" aria-hidden="true"></div>
         </div>
 
-        <div class="project-media-wrap">
-          <div class="browser-frame-wrap">
-            <div class="browser-bar-top">
-              <div class="browser-circle-dots">
-                <span class="browser-circle-dot red"></span>
-                <span class="browser-circle-dot yellow"></span>
-                <span class="browser-circle-dot green"></span>
-              </div>
-              <div class="browser-address-field">
-                <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
-                  <path d="M6 2a4 4 0 100 8 4 4 0 000-8z" stroke="currentColor" stroke-width="1.2" />
-                </svg>
-                libam-perfumes.com
-              </div>
+        <div class="skills-editorial-grid">
+
+          <!-- 01. Languages -->
+          <div class="skill-category-box">
+            <div class="category-header">
+              <span class="cat-idx">01</span>
+              <h3 class="cat-heading">Programming Languages</h3>
             </div>
-            <div class="browser-frame-body">
-              <img src="assets/images/projects/libam.png" alt="LIBAM Perfumes Store Preview">
+            <div class="skill-pill-cluster">
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">C#</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">TypeScript</span>
             </div>
           </div>
-        </div>
-      </article>
 
-      <!-- PROJECT 03: CHILD VACCINATION SYSTEM (ACADEMIC FULL-STACK) -->
-      <article class="project-block reveal-on-scroll">
-        <div class="project-details-wrap">
-          <span class="project-badge-num">Project 03 / Full Stack</span>
-          <h3 class="project-display-title">Vaccine Scheduling</h3>
-          <span class="project-display-subtitle">Clinic & Appointment Database</span>
-          <p class="project-display-desc">
-            An academic system built to coordinate clinic stocks, schedule appointment calendars, and generate
-            immunization logs for infant patients.
-          </p>
-          <ul class="project-key-highlights">
-            <li>Designed normalized relational database tables for hospital logs and inventory.</li>
-            <li>Configured secure patient portal login gates and scheduler panels.</li>
-            <li>Parsed backend database collections using ASP.NET Web Forms and ADO.NET.</li>
-          </ul>
-          <div class="tags-wrap">
-            <span class="tag-badge">ASP.NET Web Forms</span>
-            <span class="tag-badge">C#</span>
-            <span class="tag-badge">SQL Server</span>
-            <span class="tag-badge">ADO.NET</span>
-            <span class="tag-badge">CSS3</span>
-          </div>
-          <a href="https://github.com/abilbaby" class="project-link project-action-link" target="_blank"
-            rel="noopener noreferrer">View Code <span>↗</span></a>
-        </div>
-
-        <div class="project-media-wrap">
-          <div class="browser-frame-wrap">
-            <div class="browser-bar-top">
-              <div class="browser-circle-dots">
-                <span class="browser-circle-dot red"></span>
-                <span class="browser-circle-dot yellow"></span>
-                <span class="browser-circle-dot green"></span>
-              </div>
-              <div class="browser-address-field">
-                <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
-                  <path d="M6 2a4 4 0 100 8 4 4 0 000-8z" stroke="currentColor" stroke-width="1.2" />
-                </svg>
-                vaccine-scheduler.localhost
-              </div>
+          <!-- 02. Web & Frontend -->
+          <div class="skill-category-box">
+            <div class="category-header">
+              <span class="cat-idx">02</span>
+              <h3 class="cat-heading">Web &amp; Frontend</h3>
             </div>
-            <div class="browser-frame-body">
-              <img src="assets/images/projects/vaccine.png" alt="Child Vaccine Scheduling System Preview">
+            <div class="skill-pill-cluster">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">Angular 18</span>
+              <span class="skill-tag">RxJS</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">Alpine.js</span>
+              <span class="skill-tag">Responsive Design</span>
             </div>
           </div>
-        </div>
-      </article>
 
-    </div>
-  </section>
-
-  <hr class="divider line-draw container">
-
-  <!-- 05. EXPERIENCE -->
-  <section class="container section" id="experience">
-    <div class="section-sidebar">
-      <span class="section-num">03 / History</span>
-      <h2 class="section-title">Experience</h2>
-    </div>
-
-    <div class="experience-list-wrap reveal-on-scroll">
-      <div class="experience-row-item">
-        <div class="exp-item-year">Mar – Apr 2026</div>
-        <div class="exp-item-main">
-          <h3 class="exp-item-role">Frontend Development Intern</h3>
-          <span class="exp-item-company">NeST Digital Academy · Kochi</span>
-          <p class="exp-item-description">
-            Completed a 5-day Angular 18 industry immersion program followed by a 1-month frontend internship on
-            real-world SPA development. Built LIBAM Perfume Store — an Angular 18 SPA with product listing, product
-            detail, wishlist, and contact pages using Angular Router and RxJS, applying component-based OOP
-            architecture.
-          </p>
-          <a href="assets/documents/Course_Completion.pdf" class="project-action-link" target="_blank" rel="noopener noreferrer" style="margin-top: 0.75rem;">View Certificate <span>↗</span></a>
-          <!-- TEMP DOCUMENT — replace nest_certificate.pdf with actual certificate document -->
-        </div>
-        <div class="exp-item-loc">Kerala, India</div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider line-draw container">
-
-  <!-- 06. CERTIFICATES -->
-  <section class="container section" id="certificates">
-    <div class="section-sidebar">
-      <span class="section-num">04 / Credentials</span>
-      <h2 class="section-title">Certificates</h2>
-      <p class="section-subtitle">Selected credentials from software engineering internships and training.</p>
-    </div>
-
-    <div class="projects-container">
-      
-      <!-- CERTIFICATE 01 -->
-      <article class="project-block reveal-on-scroll">
-        <div class="project-details-wrap">
-          <span class="project-badge-num">Certificate 01</span>
-          <h3 class="project-display-title" style="font-size: clamp(1.8rem, 3.2vw, 2.5rem);">Frontend Development</h3>
-          <span class="project-display-subtitle">NeST Digital Academy</span>
-          <p class="project-display-desc">
-            Awarded upon completing intensive frontend engineering training in Kochi, focusing on Angular 18, TypeScript, responsive layout logic, and Git version control workflows.
-          </p>
-          <a href="assets/documents/Course_Completion.pdf" class="project-action-link" target="_blank" rel="noopener noreferrer">View Certificate <span>↗</span></a>
-        </div>
-
-        <div class="project-media-wrap">
-          <div class="browser-frame-wrap" style="aspect-ratio: 1.414; overflow: hidden; border: 1px solid var(--color-border); background: none; box-shadow: var(--shadow-md);">
-            <img src="assets/images/certificates/nest.jpeg" alt="NeST Digital Academy Course Completion Preview" style="width: 100%; height: 100%; object-fit: contain; transition: transform 1.2s var(--ease-smooth);">
-          </div>
-        </div>
-      </article>
-
-
-      <!-- CERTIFICATE 02 -->
-      <article class="project-block reveal-on-scroll">
-        <div class="project-details-wrap">
-          <span class="project-badge-num">Certificate 02</span>
-          <h3 class="project-display-title" style="font-size: clamp(1.8rem, 3.2vw, 2.5rem);">AI: Concepts & Techniques</h3>
-          <span class="project-display-subtitle">NPTEL SWAYAM</span>
-          <p class="project-display-desc">
-            An Elite certificate awarded for outstanding academic performance in search space optimization, knowledge representation models, and core AI algorithms.
-          </p>
-          <a href="assets/documents/nptel_certificate.pdf" class="project-action-link" target="_blank" rel="noopener noreferrer">View Certificate <span>↗</span></a>
-        </div>
-
-        <div class="project-media-wrap">
-          <div class="browser-frame-wrap" style="aspect-ratio: 1.414; overflow: hidden; border: 1px solid var(--color-border); background: none; box-shadow: var(--shadow-md);">
-            <img src="assets/images/certificates/nptel.png" alt="NPTEL SWAYAM AI Certificate Preview" style="width: 100%; height: 100%; object-fit: contain; transition: transform 1.2s var(--ease-smooth);">
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <hr class="divider line-draw container">
-
-  <!-- 07. TECHNICAL CAPABILITIES -->
-  <section class="container section" id="capabilities">
-    <div class="section-sidebar">
-      <span class="section-num">05 / Skills</span>
-      <h2 class="section-title">Skills & Expertise</h2>
-    </div>
-
-    <div class="capabilities-list-wrap reveal-on-scroll">
-      <div class="capability-row-item">
-        <span class="cap-item-title">Frontend</span>
-        <div class="cap-item-tags">
-          <span class="cap-item-tag">HTML5</span>
-          <span class="cap-item-tag">CSS3</span>
-          <span class="cap-item-tag">JavaScript (ES6+)</span>
-          <span class="cap-item-tag">TypeScript</span>
-          <span class="cap-item-tag">Angular 18</span>
-          <span class="cap-item-tag">Tailwind CSS</span>
-          <span class="cap-item-tag">RxJS</span>
-        </div>
-      </div>
-
-      <div class="capability-row-item">
-        <span class="cap-item-title">Backend</span>
-        <div class="cap-item-tags">
-          <span class="cap-item-tag">Laravel 13</span>
-          <span class="cap-item-tag">PHP 8.3</span>
-          <span class="cap-item-tag">C#</span>
-          <span class="cap-item-tag">ASP.NET Web Forms</span>
-          <span class="cap-item-tag">Python</span>
-        </div>
-      </div>
-
-      <div class="capability-row-item">
-        <span class="cap-item-title">Database</span>
-        <div class="cap-item-tags">
-          <span class="cap-item-tag">SQL Server</span>
-          <span class="cap-item-tag">MySQL</span>
-        </div>
-      </div>
-
-      <div class="capability-row-item">
-        <span class="cap-item-title">Tools</span>
-        <div class="cap-item-tags">
-          <span class="cap-item-tag">Git</span>
-          <span class="cap-item-tag">GitHub</span>
-          <span class="cap-item-tag">Visual Studio</span>
-          <span class="cap-item-tag">VS Code</span>
-          <span class="cap-item-tag">Agile / Scrum</span>
-        </div>
-      </div>
-
-      <div class="capability-row-item">
-        <span class="cap-item-title">Soft Skills</span>
-        <div class="cap-item-tags">
-          <span class="cap-item-tag">Problem Solving</span>
-          <span class="cap-item-tag">Analytical Thinking</span>
-          <span class="cap-item-tag">Communication</span>
-          <span class="cap-item-tag">Team Collaboration</span>
-          <span class="cap-item-tag">Adaptability</span>
-          <span class="cap-item-tag">Time Management</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider line-draw container">
-
-  <!-- 08. ABOUT & EDUCATION -->
-  <section class="container section" id="about">
-    <div class="section-sidebar">
-      <span class="section-num">06 / Biography</span>
-      <h2 class="section-title">About Me</h2>
-    </div>
-
-    <div class="about-grid-layout reveal-on-scroll">
-      <div class="about-photo-sidebar">
-        <img src="assets/images/profile/abi.jpeg" alt="Abil K Baby Profile Photograph">
-      </div>
-
-      <div class="about-profile-bio">
-        <p>
-          I am an Integrated MCA student with a deep interest in full-stack web development and software engineering. I
-          enjoy understanding how software systems operate under the hood, organizing logical data relationships, and
-          writing clean, structured code.
-        </p>
-        <p>
-          Every academic project or deployment I work on is an opportunity to learn best practices, whether that is a
-          cleaner separation of concerns in Laravel, stricter typing rules in Angular/TypeScript, or optimizing
-          relational query speeds in SQL Server.
-        </p>
-
-        <div class="education-timeline-card">
-          <h3
-            style="font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 0.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem;">
-            Education Timeline</h3>
-
-          <div class="education-step">
-            <div class="edu-step-year">2022 — Present</div>
-            <div class="edu-step-title">Integrated Master of Computer Applications (MCA)</div>
-            <div class="edu-step-school">De Paul Institute of Science & Technology  Angamaly · MG University, Kerala</div>
-          </div>
-
-          <div class="education-step">
-            <div class="edu-step-year">2025</div>
-            <div class="edu-step-title">AI: Concepts & Techniques (Elite Cert)</div>
-            <div class="edu-step-school">NPTEL SWAYAM</div>
-          </div>
-
-          <div class="education-step">
-            <div class="edu-step-year">2020 — 2022</div>
-            <div class="edu-step-title">Higher Secondary Education · Commerce</div>
-            <div class="edu-step-school">Kerala State Board</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider line-draw container">
-
-  <!-- 09. FINAL CONTACT CTA -->
-  <section class="container section" id="contact" style="padding-bottom: 6rem;">
-    <div class="section-sidebar">
-      <span class="section-num">07 / Connect</span>
-      <h2 class="section-title">Contact</h2>
-    </div>
-
-    <div class="contact-grid reveal-on-scroll">
-      
-      <!-- Direct Message Form -->
-      <div class="contact-form-wrap">
-        <form class="contact-form" id="contact-form">
-          <div class="form-group-row">
-            <div class="form-group">
-              <label for="form-name" class="form-label">Your Name</label>
-              <input type="text" id="form-name" class="form-input" placeholder="John Doe" required>
+          <!-- 03. Backend & Frameworks -->
+          <div class="skill-category-box">
+            <div class="category-header">
+              <span class="cat-idx">03</span>
+              <h3 class="cat-heading">Backend &amp; Frameworks</h3>
             </div>
-            <div class="form-group">
-              <label for="form-email" class="form-label">Email Address</label>
-              <input type="email" id="form-email" class="form-input" placeholder="john@example.com" required>
+            <div class="skill-pill-cluster">
+              <span class="skill-tag">Laravel</span>
+              <span class="skill-tag">ASP.NET Web Forms</span>
             </div>
           </div>
-          <div class="form-group">
-            <label for="form-subject" class="form-label">Subject</label>
-            <input type="text" id="form-subject" class="form-input" placeholder="Project Discussion" required>
+
+          <!-- 04. Databases -->
+          <div class="skill-category-box">
+            <div class="category-header">
+              <span class="cat-idx">04</span>
+              <h3 class="cat-heading">Databases</h3>
+            </div>
+            <div class="skill-pill-cluster">
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">SQL Server</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">Relational Schema Design</span>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="form-message" class="form-label">Message</label>
-            <textarea id="form-message" class="form-textarea" placeholder="Hi Abil, I would love to discuss a project with you..." required></textarea>
+
+          <!-- 05. Concepts -->
+          <div class="skill-category-box">
+            <div class="category-header">
+              <span class="cat-idx">05</span>
+              <h3 class="cat-heading">Concepts</h3>
+            </div>
+            <div class="skill-pill-cluster">
+              <span class="skill-tag">Object-Oriented Programming</span>
+              <span class="skill-tag">CRUD Operations</span>
+              <span class="skill-tag">Role-Based Access Control</span>
+            </div>
           </div>
-          <button type="submit" class="btn-submit">
-            Send Message <span>→</span>
+
+          <!-- 06. Tools & Practices (exclusive reference here) -->
+          <div class="skill-category-box">
+            <div class="category-header">
+              <span class="cat-idx">06</span>
+              <h3 class="cat-heading">Tools &amp; Practices</h3>
+            </div>
+            <div class="skill-pill-cluster">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Visual Studio</span>
+              <span class="skill-tag">Agile</span>
+              <span class="skill-tag skill-tag--accent">Linux</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         7. CERTIFICATIONS SECTION
+    ══════════════════════════════════════════════════ -->
+    <section class="section certs-section" id="certifications" aria-labelledby="certs-heading">
+      <div class="container">
+
+        <div class="section-top-bar">
+          <span class="section-num">05 / CREDENTIALS</span>
+          <h2 class="section-title" id="certs-heading">Verified <span class="text-ice">Certifications</span></h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <!-- ── PRIMARY CREDENTIALS (PROMINENT BY DEFAULT) ── -->
+        <div class="certs-editorial-grid">
+
+          <!-- Primary 01: NeST Digital Academy Internship -->
+          <div class="cert-editorial-card">
+            <div class="cert-preview-frame">
+              <img
+                src="assets/images/certificates/Internship.jpg"
+                alt="NeST Digital Internship Certificate preview"
+                class="cert-preview-img"
+                loading="lazy">
+            </div>
+            <div class="cert-card-header">
+              <span class="cert-num-badge">01</span>
+              <span class="cert-authority">NeST Digital</span>
+            </div>
+            <h3 class="cert-heading">Front-End Application Development using Angular</h3>
+            <p class="cert-meta-info">Internship Certificate · March 16 – April 16, 2026</p>
+            <a
+              href="assets/documents/Internship.pdf"
+              class="cert-document-link"
+              data-cert-modal
+              data-cert-title="Front-End Application Development using Angular"
+              data-cert-org="NeST Digital (NeST Digital Academy)"
+              data-cert-img="assets/images/certificates/Internship.jpg"
+              data-cert-doc="assets/documents/Internship.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+              <span>View Certificate</span>
+              <span class="arrow-diag" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <!-- Primary 02: DevOps Certification -->
+          <div class="cert-editorial-card">
+            <div class="cert-preview-frame">
+              <img
+                src="assets/images/certificates/devops_certificate.png"
+                alt="DevOps: The Essentials certificate preview"
+                class="cert-preview-img"
+                loading="lazy">
+            </div>
+            <div class="cert-card-header">
+              <span class="cert-num-badge">02</span>
+              <span class="cert-authority">NeST Digital Academy</span>
+            </div>
+            <h3 class="cert-heading">DevOps: The Essentials</h3>
+            <p class="cert-meta-info">Technical Overview Series</p>
+            <a
+              href="assets/documents/devops_certificate.pdf"
+              class="cert-document-link"
+              data-cert-modal
+              data-cert-title="DevOps: The Essentials"
+              data-cert-org="NeST Digital Academy"
+              data-cert-img="assets/images/certificates/devops_certificate.png"
+              data-cert-doc="assets/documents/devops_certificate.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+              <span>View Certificate</span>
+              <span class="arrow-diag" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <!-- Primary 03: NeST Cybersecurity Certification -->
+          <div class="cert-editorial-card">
+            <div class="cert-preview-frame">
+              <img
+                src="assets/images/certificates/ai_cybersecurity.png"
+                alt="AI in Cybersecurity Masterclass certificate preview"
+                class="cert-preview-img"
+                loading="lazy">
+            </div>
+            <div class="cert-card-header">
+              <span class="cert-num-badge">03</span>
+              <span class="cert-authority">NeST Digital Academy</span>
+            </div>
+            <h3 class="cert-heading">AI in Cybersecurity</h3>
+            <p class="cert-meta-info">Masterclass Series</p>
+            <a
+              href="assets/images/certificates/ai_cybersecurity.png"
+              class="cert-document-link"
+              data-cert-modal
+              data-cert-title="AI in Cybersecurity"
+              data-cert-org="NeST Digital Academy"
+              data-cert-img="assets/images/certificates/ai_cybersecurity.png"
+              data-cert-doc="assets/images/certificates/ai_cybersecurity.png"
+              target="_blank"
+              rel="noopener noreferrer">
+              <span>View Certificate</span>
+              <span class="arrow-diag" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <!-- Primary 04: Angular 17 Basics Certification -->
+          <div class="cert-editorial-card">
+            <div class="cert-preview-frame">
+              <img
+                src="assets/images/certificates/angular17_basics.svg"
+                alt="Angular 17 Basics certificate preview"
+                class="cert-preview-img"
+                loading="lazy">
+            </div>
+            <div class="cert-card-header">
+              <span class="cert-num-badge">04</span>
+              <span class="cert-authority">NeST Digital Academy</span>
+            </div>
+            <h3 class="cert-heading">Angular 17 Basics</h3>
+            <p class="cert-meta-info">Foundational Development Series</p>
+            <a
+              href="assets/documents/angular17_basics.pdf"
+              class="cert-document-link"
+              data-cert-modal
+              data-cert-title="Angular 17 Basics"
+              data-cert-org="NeST Digital Academy"
+              data-cert-img="assets/images/certificates/angular17_basics.svg"
+              data-cert-doc="assets/documents/angular17_basics.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+              <span>View Certificate</span>
+              <span class="arrow-diag" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- ── SECONDARY CREDENTIALS (COLLAPSIBLE SECTION) ── -->
+        <div class="certs-toggle-wrap">
+          <button
+            type="button"
+            class="btn-collapse-certs"
+            id="btn-toggle-certs"
+            aria-expanded="false"
+            aria-controls="collapsible-certs-grid">
+            <span class="btn-collapse-text">Additional Certifications</span>
+            <span class="btn-collapse-icon" aria-hidden="true">↓</span>
           </button>
-        </form>
-
-        <!-- Dynamic Success State Container -->
-        <div class="form-success-message" id="contact-success-msg">
-          <div class="success-icon-circle">✓</div>
-          <h3>Message Sent!</h3>
-          <p>Thank you for reaching out. I'll get back to you as soon as possible!</p>
-        </div>
-      </div>
-
-      <!-- Contact Info Sidebar -->
-      <div class="contact-info-wrap">
-        <div class="contact-info-card">
-          
-          <div class="contact-info-item">
-            <span class="contact-info-label">Direct Email</span>
-            <a href="mailto:abilkbaby7@gmail.com" class="contact-info-val">abilkbaby7@gmail.com</a>
-          </div>
-
-          <div class="contact-info-item">
-            <span class="contact-info-label">GitHub Profiles</span>
-            <a href="https://github.com/abilbaby" target="_blank" rel="noopener noreferrer" class="contact-info-val">github.com/abilbaby</a>
-          </div>
-
-          <div class="contact-info-item">
-            <span class="contact-info-label">LinkedIn Connection</span>
-            <a href="https://linkedin.com/in/abil-k-baby-132a59411" target="_blank" rel="noopener noreferrer" class="contact-info-val">linkedin.com/in/abil-k-baby-132a59411</a>
-          </div>
-
-          <div class="contact-info-item">
-            <span class="contact-info-label">Location</span>
-            <span class="contact-info-val loc">Kerala, India</span>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 09. FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-layout">
-        <div class="footer-brand-wrap">
-          <div class="f-brand-title">ABIL K. BABY</div>
-          <div class="f-brand-sub">Integrated MCA Student & Full Stack Developer</div>
         </div>
 
-        <div class="footer-links-grid">
-          <div class="footer-links-col">
-            <h4>Menu</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="projects.html">Projects</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="certificates.html">Certificates</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
+        <div class="certs-collapsible-container" id="collapsible-certs-grid" hidden>
+          <div class="certs-category-header">
+            <h3 class="certs-subtitle">Additional Certifications</h3>
           </div>
-          <div class="footer-links-col">
-            <h4>Professional</h4>
-            <ul>
-              <li><a href="https://github.com/abilbaby" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a href="https://linkedin.com/in/abil-k-baby-132a59411" target="_blank"
-                  rel="noopener noreferrer">LinkedIn</a></li>
-              <li><a href="mailto:abilkbaby7@gmail.com">Email</a></li>
-            </ul>
+
+          <div class="certs-editorial-grid">
+
+            <!-- Secondary 01: Swarm Robotics Research Paper Presentation -->
+            <div class="cert-editorial-card">
+              <div class="cert-preview-frame">
+                <img
+                  src="assets/images/certificates/swarm_robotics_certificate.jpg"
+                  alt="Swarm Robotics — Research Paper Presentation Certificate preview"
+                  class="cert-preview-img"
+                  loading="lazy">
+              </div>
+              <div class="cert-card-header">
+                <span class="cert-num-badge">05</span>
+                <span class="cert-authority">De Paul Institute of Science &amp; Technology</span>
+              </div>
+              <h3 class="cert-heading">Swarm Robotics — Research Paper Presentation</h3>
+              <p class="cert-meta-info">School of Computer Science · NCAICS-2026 · February 17, 2026</p>
+              <a
+                href="assets/documents/swarm_robotics_certificate.jpg"
+                class="cert-document-link"
+                data-cert-modal
+                data-cert-title="Swarm Robotics — Research Paper Presentation"
+                data-cert-org="School of Computer Science, De Paul Institute of Science &amp; Technology"
+                data-cert-img="assets/images/certificates/swarm_robotics_certificate.jpg"
+                data-cert-doc="assets/documents/swarm_robotics_certificate.jpg"
+                target="_blank"
+                rel="noopener noreferrer">
+                <span>View Certificate</span>
+                <span class="arrow-diag" aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <!-- Secondary 02: NPTEL SWAYAM -->
+            <div class="cert-editorial-card">
+              <div class="cert-preview-frame">
+                <img
+                  src="assets/images/certificates/nptel_certificate_full.svg"
+                  alt="NPTEL Artificial Intelligence Concepts and Techniques Elite Certificate full preview"
+                  class="cert-preview-img"
+                  loading="lazy">
+              </div>
+              <div class="cert-card-header">
+                <span class="cert-num-badge">06</span>
+                <span class="cert-authority">NPTEL SWAYAM</span>
+              </div>
+              <h3 class="cert-heading">Artificial Intelligence: Concepts and Techniques</h3>
+              <p class="cert-meta-info">Elite Certificate (Score: 60%) · Jul–Oct 2025</p>
+              <a
+                href="assets/documents/nptel_certificate.pdf"
+                class="cert-document-link"
+                data-cert-modal
+                data-cert-title="Artificial Intelligence: Concepts and Techniques"
+                data-cert-org="NPTEL SWAYAM (Funded by MoE, Govt. of India)"
+                data-cert-img="assets/images/certificates/nptel_certificate_full.svg"
+                data-cert-doc="assets/documents/nptel_certificate.pdf"
+                target="_blank"
+                rel="noopener noreferrer">
+                <span>View Certificate</span>
+                <span class="arrow-diag" aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <!-- Secondary 03: NeST Immersion Course Completion -->
+            <div class="cert-editorial-card">
+              <div class="cert-preview-frame">
+                <img
+                  src="assets/images/certificates/Course_Completion_full.svg"
+                  alt="NeST Immersion Program Certificate preview"
+                  class="cert-preview-img"
+                  loading="lazy">
+              </div>
+              <div class="cert-card-header">
+                <span class="cert-num-badge">07</span>
+                <span class="cert-authority">NeST Digital Academy</span>
+              </div>
+              <h3 class="cert-heading">Industry Immersion Program on Front end Application Development using Angular</h3>
+              <p class="cert-meta-info">Certificate of Completion · March 09 – 13, 2026</p>
+              <a
+                href="assets/documents/Course_Completion.pdf"
+                class="cert-document-link"
+                data-cert-modal
+                data-cert-title="Industry Immersion Program on Front end Application Development using Angular"
+                data-cert-org="NeST Digital Academy"
+                data-cert-img="assets/images/certificates/Course_Completion_full.svg"
+                data-cert-doc="assets/documents/Course_Completion.pdf"
+                target="_blank"
+                rel="noopener noreferrer">
+                <span>View Certificate</span>
+                <span class="arrow-diag" aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <!-- Secondary 04: Introduction to AR/VR and MR -->
+            <div class="cert-editorial-card">
+              <div class="cert-preview-frame">
+                <img
+                  src="assets/images/certificates/ar_vr_mr.svg"
+                  alt="Introduction to AR/VR and MR Badge preview"
+                  class="cert-preview-img"
+                  loading="lazy">
+              </div>
+              <div class="cert-card-header">
+                <span class="cert-num-badge">08</span>
+                <span class="cert-authority">NeST Digital Academy</span>
+              </div>
+              <h3 class="cert-heading">Introduction to AR/VR and MR</h3>
+              <p class="cert-meta-info">Foundational Technology Badge · Extended Reality &amp; Spatial Computing</p>
+              <a
+                href="assets/documents/ar_vr_mr.pdf"
+                class="cert-document-link"
+                data-cert-modal
+                data-cert-title="Introduction to AR/VR and MR"
+                data-cert-org="NeST Digital Academy"
+                data-cert-img="assets/images/certificates/ar_vr_mr.svg"
+                data-cert-doc="assets/documents/ar_vr_mr.pdf"
+                target="_blank"
+                rel="noopener noreferrer">
+                <span>View Certificate</span>
+                <span class="arrow-diag" aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <!-- Secondary 05: IBM SkillsBuild Gen AI & Cloud Computing Internship -->
+            <div class="cert-editorial-card">
+              <div class="cert-preview-frame">
+                <img
+                  src="assets/images/certificates/ibm_skillsbuild.png"
+                  alt="AICTE | IBM SkillsBuild Gen AI & Cloud Computing Internship Certificate preview"
+                  class="cert-preview-img"
+                  loading="lazy">
+              </div>
+              <div class="cert-card-header">
+                <span class="cert-num-badge">09</span>
+                <span class="cert-authority">IBM SkillsBuild</span>
+              </div>
+              <h3 class="cert-heading">AICTE | IBM SkillsBuild Gen AI &amp; Cloud Computing Internship</h3>
+              <p class="cert-meta-info">Completion Certificate · PLAN-0E0A390A619F · BharatCares · June 2026</p>
+              <a
+                href="assets/documents/ibm_skillsbuild.png"
+                class="cert-document-link"
+                data-cert-modal
+                data-cert-title="AICTE | IBM SkillsBuild Gen AI &amp; Cloud Computing Internship | BharatCares"
+                data-cert-org="IBM SkillsBuild (in partnership with AICTE &amp; BharatCares)"
+                data-cert-img="assets/images/certificates/ibm_skillsbuild.png"
+                data-cert-doc="assets/documents/ibm_skillsbuild.png"
+                target="_blank"
+                rel="noopener noreferrer">
+                <span>View Certificate</span>
+                <span class="arrow-diag" aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <!-- Secondary 06: NeST Digital Academy AI & ML -->
+            <div class="cert-editorial-card">
+              <div class="cert-preview-frame">
+                <img
+                  src="assets/images/certificates/nest_ai.svg"
+                  alt="Introduction to Artificial Intelligence and Machine Learning Badge preview"
+                  class="cert-preview-img"
+                  loading="lazy">
+              </div>
+              <div class="cert-card-header">
+                <span class="cert-num-badge">10</span>
+                <span class="cert-authority">NeST Digital Academy</span>
+              </div>
+              <h3 class="cert-heading">Introduction to Artificial Intelligence and Machine Learning</h3>
+              <p class="cert-meta-info">Foundational Technology Badge · Artificial Intelligence &amp; ML</p>
+              <a
+                href="assets/documents/nest_ai_certificate.pdf"
+                class="cert-document-link"
+                data-cert-modal
+                data-cert-title="Introduction to Artificial Intelligence and Machine Learning"
+                data-cert-org="NeST Digital Academy"
+                data-cert-img="assets/images/certificates/nest_ai.svg"
+                data-cert-doc="assets/documents/nest_ai_certificate.pdf"
+                target="_blank"
+                rel="noopener noreferrer">
+                <span>View Certificate</span>
+                <span class="arrow-diag" aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <!-- Secondary 07: NeST Digital Academy Embedded Systems -->
+            <div class="cert-editorial-card">
+              <div class="cert-preview-frame">
+                <img
+                  src="assets/images/certificates/nest_embedded.svg"
+                  alt="Designing Intelligent Devices — Embedded Systems in Action Badge preview"
+                  class="cert-preview-img"
+                  loading="lazy">
+              </div>
+              <div class="cert-card-header">
+                <span class="cert-num-badge">11</span>
+                <span class="cert-authority">NeST Digital Academy</span>
+              </div>
+              <h3 class="cert-heading">Designing Intelligent Devices — Embedded Systems in Action</h3>
+              <p class="cert-meta-info">Specialized Technical Badge · Embedded Hardware &amp; Intelligent IoT</p>
+              <a
+                href="assets/documents/nest_embedded.pdf"
+                class="cert-document-link"
+                data-cert-modal
+                data-cert-title="Designing Intelligent Devices — Embedded Systems in Action"
+                data-cert-org="NeST Digital Academy"
+                data-cert-img="assets/images/certificates/nest_embedded.svg"
+                data-cert-doc="assets/documents/nest_embedded.pdf"
+                target="_blank"
+                rel="noopener noreferrer">
+                <span>View Certificate</span>
+                <span class="arrow-diag" aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <!-- Secondary 08: NxtWave Generative AI Workshop -->
+            <div class="cert-editorial-card">
+              <div class="cert-preview-frame">
+                <img
+                  src="assets/images/certificates/nxtwave_certificate.jpg"
+                  alt="AI for Students: Build Your Own Generative AI Model Certificate preview"
+                  class="cert-preview-img"
+                  loading="lazy">
+              </div>
+              <div class="cert-card-header">
+                <span class="cert-num-badge">12</span>
+                <span class="cert-authority">NxtWave</span>
+              </div>
+              <h3 class="cert-heading">AI for Students: Build Your Own Generative AI Model</h3>
+              <p class="cert-meta-info">Certificate of Participation · Generative AI Workshop · April 21, 2025</p>
+              <a
+                href="assets/documents/nxtwave_certificate.pdf"
+                class="cert-document-link"
+                data-cert-modal
+                data-cert-title="AI for Students: Build Your Own Generative AI Model"
+                data-cert-org="NxtWave (Conducted by Trivikrama, IIT Delhi Alumnus)"
+                data-cert-img="assets/images/certificates/nxtwave_certificate.jpg"
+                data-cert-doc="assets/documents/nxtwave_certificate.pdf"
+                target="_blank"
+                rel="noopener noreferrer">
+                <span>View Certificate</span>
+                <span class="arrow-diag" aria-hidden="true">↗</span>
+              </a>
+            </div>
+
           </div>
         </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         8. ACHIEVEMENT SECTION
+    ══════════════════════════════════════════════════ -->
+    <section class="section achievement-section" id="achievement" aria-labelledby="achievement-heading">
+      <div class="container">
+
+        <div class="section-top-bar">
+          <span class="section-num">06 / SCHOLARSHIP</span>
+          <h2 class="section-title" id="achievement-heading">Academic <span class="text-ice">Achievement</span></h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="achievement-showcase-box">
+          <div class="ach-icon-cell" aria-hidden="true">
+            <div class="ach-symbol">✦</div>
+          </div>
+          <div class="ach-content-cell">
+            <span class="ach-category-tag">NATIONAL CONFERENCE RESEARCH PAPER</span>
+            <h3 class="ach-paper-title">Swarm Robotics — <span class="text-ice">Research Paper</span> Presentation</h3>
+            <p class="ach-paper-description">
+              Presented paper titled "Swarm Robotics" at the National Conference on Advances in AI, Cyber Security and Intelligent System (NCAICS-2026), De Paul Institute of Science &amp; Technology | February 2026.
+            </p>
+            <div class="ach-footer-row">
+              <div class="ach-meta-row">
+                <span class="ach-venue">NCAICS-2026</span>
+                <span class="meta-sep" aria-hidden="true">·</span>
+                <span class="ach-date">February 2026</span>
+              </div>
+              <div class="ach-cta-wrap">
+                <a
+                  href="assets/documents/swarm_robotics_certificate.jpg"
+                  class="ach-cert-btn"
+                  data-cert-modal
+                  data-cert-title="Swarm Robotics — Research Paper Presentation"
+                  data-cert-org="School of Computer Science, De Paul Institute of Science &amp; Technology (DiST)"
+                  data-cert-img="assets/images/certificates/swarm_robotics_certificate.jpg"
+                  data-cert-doc="assets/documents/swarm_robotics_certificate.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View Swarm Robotics Presentation Certificate">
+                  <span>View Certificate</span>
+                  <span class="arrow-diag" aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         9. CONTACT SECTION (Midnight Navy & Glacial Illumination)
+    ══════════════════════════════════════════════════ -->
+    <section class="section contact-section-dark" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+
+        <div class="contact-closing-card">
+          <div class="contact-card-grid">
+
+            <!-- Left: Impact Statement -->
+            <div class="contact-statement-col">
+              <span class="contact-dark-tag">07 // INITIATE DIALOGUE</span>
+              <h2 class="contact-closing-heading" id="contact-heading">
+                Let's Build Something <span class="text-ice glow-ice">Meaningful</span> Together.
+              </h2>
+              <p class="contact-closing-intro">
+                Feel free to connect for full-stack web engineering projects, technical inquiries, or collaborative opportunities.
+              </p>
+
+              <div class="contact-methods-table">
+                <div class="method-row">
+                  <span class="method-label">DIRECT EMAIL</span>
+                  <a href="mailto:abilkbaby7@gmail.com" class="method-link">
+                    <span>Email Me</span>
+                    <span class="arrow-diag" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+
+                <div class="method-row">
+                  <span class="method-label">LINKEDIN</span>
+                  <a href="https://www.linkedin.com/in/abil-k-baby-132a59411" class="method-link" target="_blank" rel="noopener noreferrer">
+                    <span>Connect on LinkedIn</span>
+                    <span class="arrow-diag" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+
+                <div class="method-row">
+                  <span class="method-label">GITHUB</span>
+                  <a href="https://github.com/abilbaby" class="method-link" target="_blank" rel="noopener noreferrer">
+                    <span>Explore GitHub</span>
+                    <span class="arrow-diag" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-actions-strip">
+                <a href="mailto:abilkbaby7@gmail.com" class="btn-primary">
+                  <span>Send Direct Email</span>
+                  <span class="arrow-diag" aria-hidden="true">↗</span>
+                </a>
+                <a href="assets/documents/Abil_CVf.pdf" class="btn-dark-ghost" target="_blank" rel="noopener noreferrer">
+                  <span>Download Resume ↓</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right: Frosted Glass Interactive Messaging Form -->
+            <div class="contact-form-col">
+              <form class="contact-dark-form" id="contact-form" novalidate aria-label="Send direct message">
+                <h3 class="form-card-title">Send a message</h3>
+
+                <div class="form-input-group">
+                  <label for="contact-name" class="dark-field-label">NAME</label>
+                  <input type="text" id="contact-name" name="name" class="dark-field-input" placeholder="Your Name" required>
+                </div>
+
+                <div class="form-input-group">
+                  <label for="contact-email" class="dark-field-label">EMAIL</label>
+                  <input type="email" id="contact-email" name="email" class="dark-field-input" placeholder="name@domain.com" required>
+                </div>
+
+                <div class="form-input-group">
+                  <label for="contact-message" class="dark-field-label">MESSAGE</label>
+                  <textarea id="contact-message" name="message" class="dark-field-textarea" placeholder="Hello Abil, I'd like to discuss an opportunity..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary form-submit-btn">
+                  <span>Submit Message</span>
+                  <span class="arrow-diag" aria-hidden="true">↗</span>
+                </button>
+              </form>
+
+              <div class="form-success-box" id="form-sent-status" aria-live="polite" hidden>
+                <div class="success-glyph">✓</div>
+                <h4>Message Received</h4>
+                <p>Thank you for reaching out. Opening your email client to send.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── 10. MINIMAL FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-layout">
+
+      <div class="footer-brand-side">
+        <a href="#home" class="brand-mark" aria-label="Abil K Baby — Home">
+          <span class="brand-text">A.K.</span>
+          <span class="brand-dot">.</span>
+        </a>
       </div>
 
-      <div class="footer-credits-row">
-        <p>© <span class="dynamic-year">2026</span> Abil K Baby. All rights reserved.</p>
-        <p>Built and designed by Abil K Baby.</p>
+      <nav class="footer-nav-menu" aria-label="Footer Menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer-copy">
+        © <span id="current-year">2026</span> Abil K Baby. All rights reserved.
       </div>
+
     </div>
   </footer>
 
-  <!-- CDNs & Scripts -->
+  <!-- ── CERTIFICATE PREVIEW MODAL ── -->
+  <div class="cert-modal-backdrop" id="cert-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cert-modal-heading">
+    <div class="cert-modal-dialog">
+      <div class="cert-modal-header">
+        <div>
+          <span class="cert-modal-badge" id="cert-modal-badge">Credential</span>
+          <h3 class="cert-modal-heading" id="cert-modal-heading">Certificate Title</h3>
+        </div>
+        <button type="button" class="cert-modal-close" id="cert-modal-close" aria-label="Close certificate preview">&times;</button>
+      </div>
+      <div class="cert-modal-body" id="cert-modal-body">
+        <img src="" alt="" class="cert-modal-preview-img" id="cert-modal-img">
+        <iframe src="" class="cert-modal-pdf-frame" id="cert-modal-iframe" title="Certificate Document Viewer" hidden></iframe>
+      </div>
+      <div class="cert-modal-footer">
+        <a href="#" class="btn-primary" id="cert-modal-link" target="_blank" rel="noopener noreferrer">
+          <span>Open Full Document</span>
+          <span class="arrow-diag" aria-hidden="true">↗</span>
+        </a>
+        <button type="button" class="btn-secondary" id="cert-modal-dismiss">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CDNs: Lenis Smooth Scroll + GSAP Core + ScrollTrigger -->
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
 
 </body>
-
 </html>
