@@ -705,12 +705,20 @@ button {
 }
 
 .hero-role-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   font-family: var(--font-mono);
-  font-size: 0.92rem;
-  font-weight: 600;
+  font-size: 1.12rem;
+  font-weight: 700;
   color: var(--clr-navy);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   margin-bottom: 1.5rem;
+  padding: 0.45rem 1.05rem;
+  background: rgba(160, 192, 208, 0.16);
+  border-left: 3.5px solid var(--clr-deep-ice);
+  border-radius: var(--radius-xs);
+  width: fit-content;
 }
 
 .hero-role-title .sep {
@@ -719,11 +727,19 @@ button {
 }
 
 .hero-summary-copy {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--clr-text-muted);
-  line-height: 1.82;
-  max-width: 640px;
+  line-height: 1.76;
+  max-width: 660px;
   margin-bottom: 2rem;
+}
+
+.hero-summary-copy p {
+  margin-bottom: 0.95rem;
+}
+
+.hero-summary-copy p:last-child {
+  margin-bottom: 0;
 }
 
 .hero-actions-row {
@@ -1582,11 +1598,17 @@ button {
   transform: translateX(3px);
 }
 
-/* ── 11. TECHNICAL SKILLS SECTION (INTERACTIVE ARCHITECTURAL MATRIX) ── */
+/* ── 11. SKILLS & CAPABILITIES SECTION (4-CATEGORY EDITORIAL MATRIX) ── */
 .skills-editorial-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+}
+
+@media (max-width: 900px) {
+  .skills-editorial-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .skill-category-box {
@@ -1597,6 +1619,8 @@ button {
   padding: 1.65rem;
   box-shadow: var(--shadow-subtle);
   transition: all var(--t-fast);
+  display: flex;
+  flex-direction: column;
 }
 
 .skill-category-box:hover {
@@ -1606,9 +1630,21 @@ button {
   box-shadow: var(--shadow-lift);
 }
 
+/* Category 02: AI & Prompt Engineering Distinctive Box */
+.skill-category-box--ai {
+  border-top: 3.5px solid var(--clr-deep-ice);
+  background: linear-gradient(180deg, rgba(244, 246, 248, 0.6) 0%, #FFFFFF 100%);
+  position: relative;
+}
+
+.skill-category-box--ai:hover {
+  border-color: var(--clr-deep-ice);
+  box-shadow: 0 10px 28px rgba(113, 156, 178, 0.22);
+}
+
 .category-header {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   gap: 0.75rem;
   padding-bottom: 0.95rem;
   border-bottom: 1px solid var(--clr-mist);
@@ -1620,13 +1656,41 @@ button {
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--clr-deep-ice);
+  padding-top: 0.15rem;
 }
 
 .cat-heading {
   font-family: var(--font-sans);
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 700;
   color: var(--clr-navy);
+}
+
+.cat-subtext {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--clr-text-muted);
+  margin-top: 0.2rem;
+}
+
+.sub-skill-group {
+  margin-bottom: 1.15rem;
+}
+
+.sub-skill-group:last-child {
+  margin-bottom: 0;
+}
+
+.sub-skill-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--clr-slate);
+  margin-bottom: 0.45rem;
 }
 
 .skill-pill-cluster {
@@ -1652,6 +1716,70 @@ button {
   color: var(--clr-navy);
   background: #FFFFFF;
   box-shadow: 0 4px 14px rgba(160, 192, 208, 0.4);
+}
+
+/* AI Skill Tags */
+.skill-tag--ai {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--clr-navy);
+  background: rgba(160, 192, 208, 0.16);
+  border: 1px solid rgba(113, 156, 178, 0.45);
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-xs);
+  transition: all var(--t-fast);
+}
+
+.skill-tag--ai:hover {
+  background: #FFFFFF;
+  border-color: var(--clr-deep-ice);
+  color: var(--clr-deep-ice);
+  box-shadow: 0 4px 14px rgba(113, 156, 178, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Engineering Practices & Interpersonal Tag Variations */
+.skill-tag--practice,
+.skill-tag--interpersonal {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--clr-navy);
+  background: var(--clr-bg);
+  border: 1px solid var(--clr-mist);
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-xs);
+  transition: all var(--t-fast);
+}
+
+.skill-tag--practice:hover,
+.skill-tag--interpersonal:hover {
+  background: #FFFFFF;
+  border-color: var(--clr-ice);
+  box-shadow: 0 4px 12px rgba(160, 192, 208, 0.3);
+  transform: translateY(-1px);
+}
+
+.skill-context-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: auto;
+  padding-top: 1.15rem;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--clr-slate);
+  border-top: 1px dashed var(--clr-mist);
+}
+
+.skill-context-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--clr-deep-ice);
+  display: inline-block;
 }
 
 /* Linux exclusively featured pill */

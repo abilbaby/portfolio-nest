@@ -25,6 +25,10 @@
 - [x] `assets/documents/nest_ai_certificate.pdf` / `assets/images/certificates/nest_ai.svg` — NeST Digital Academy Introduction to Artificial Intelligence and Machine Learning Badge
 - [x] `assets/documents/nest_embedded.pdf` / `assets/images/certificates/nest_embedded.svg` — NeST Digital Academy Designing Intelligent Devices — Embedded Systems in Action Badge
 - [x] `assets/documents/nxtwave_certificate.pdf` / `assets/images/certificates/nxtwave_certificate.jpg` — NxtWave AI for Students: Build Your Own Generative AI Model
+- [x] `assets/documents/devops_fundamentals.pdf` / `assets/images/certificates/devops_fundamentals.svg` — NeST Digital Academy DevOps Fundamentals Badge
+- [x] `assets/documents/owasp_fundamentals.pdf` / `assets/images/certificates/owasp_fundamentals.svg` — NeST Digital Academy OWASP Fundamentals Badge
+- [x] `assets/documents/ibm_prompt_engineering.pdf` / `assets/images/certificates/ibm_prompt_engineering.svg` — IBM SkillsBuild Prompt Engineering: Shaping Better AI Responses
+- [x] `assets/documents/ibm_cloud_computing.pdf` / `assets/images/certificates/ibm_cloud_computing.svg` — IBM SkillsBuild Exploring Cloud Computing
 
 ---
 
